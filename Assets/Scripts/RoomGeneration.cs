@@ -14,7 +14,7 @@ public class RoomGeneration : MonoBehaviour
     [SerializeField] GameObject Room5;
 
     [Header("NLevelRooms")]
-    [SerializeField] int nLevelRooms;
+    [SerializeField] public int nLevelRooms;
 
     [Header("AmbientCube")]
     [SerializeField] Renderer cubeAmbient;
