@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: nLevelRooms
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1857702191671647501, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
+      propertyPath: intesityCanvas
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1960477843706355414, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
       propertyPath: m_Name
       value: RoomManager

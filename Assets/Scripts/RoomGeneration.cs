@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomGeneration : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class RoomGeneration : MonoBehaviour
 
     [Header("AmbientCube")]
     [SerializeField] Light Light;
+    private GameObject intesityImage;
+    private RawImage intesityCanvas;
 
     [SerializeField] int level;
 
@@ -38,83 +41,101 @@ public class RoomGeneration : MonoBehaviour
 
         player = GameObject.Find("Hero_Idle_0");
         roomSaved = player.GetComponent<SaveRooms>();
+        intesityImage = GameObject.Find("RawImage");
+        intesityCanvas = intesityImage.GetComponent<RawImage>();
 
         CheckRoomsExistence();
 
     }
 
-    private int SelectAmbient()
+    private Color SelectAmbient()
     {
+        Color ambientColor = Color.white;
         int ambient = Random.Range(0,5);
 
         switch (ambient)
         {
             case 0:
-                Light.color = new Color(255, 0, 0);
+                Light.color = ambientColor = new Color(255, 0, 0);
+
                 break;
 
             case 1:
-                Light.color = new Color(0f, 0f, 255f);
+                Light.color = ambientColor = new Color(0f, 0f, 255f);
                 break;
 
             case 2:
-                Light.color = new Color(0f, 255f, 0f);
+                Light.color = ambientColor = new Color(0f, 255f, 0f);
                 break;
 
             case 3:
-                Light.color = new Color(0f, 0f, 0f);
+                Light.color = ambientColor = new Color(0f, 0f, 0f);
                 break;
 
             case 4:
-                Light.color = new Color(0f, 255f, 255f);
+                Light.color = ambientColor = new Color(0f, 255f, 255f);
                 break;
 
         }
-        return ambient;
+        return ambientColor;
     }
-    private void SelectOldAmbient(int ambient)
+    private void SelectOldAmbient(Color ambient)
     {
-
-        switch (ambient)
+        if (ambient == new Color(255f, 0f, 0f))
         {
-            case 0:
-                Light.color = new Color(255, 0, 0);
-                break;
-
-            case 1:
-                Light.color = new Color(0f, 0f, 255f);
-                break;
-
-            case 2:
-                Light.color = new Color(0f, 255f, 0f);
-                break;
-
-            case 3:
-                Light.color = new Color(0f, 0f, 0f);
-                break;
-
-            case 4:
-                Light.color = new Color(0f, 255f, 255f);
-                break;
-
+            Light.color = ambient;
+        }
+        if (ambient == new Color(0f,0f,255f))
+        {
+           Light.color = ambient;
+        }
+        if(ambient == new Color(0f,255f,0f))
+        {
+            Light.color = ambient;
+        }
+        if (ambient == new Color(0f, 0f, 0f))
+        {
+            Light.color = ambient;
+        }
+        if (ambient == new Color(0f, 255f, 255f))
+        {
+            Light.color = ambient;
         }
     }
-    public void SelectIntensity()
+    public int SelectNewIntensity(Color ambient)
     {
         int intesityR = Random.Range(0, 3);
 
         switch (intesityR)
         {
             case 0:
-                Light.intensity = 3f;
+               intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.1f);
                 break;
 
             case 1:
-                Light.intensity = 5f;
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.35f);
                 break;
 
             case 2:
-                Light.intensity = 10f;
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
+                break;
+        }
+        return intesityR;
+    }
+    public void SelectOldIntensity(Color ambient, int intensity)
+    {
+        switch (intensity)
+        {
+            case 0:
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.1f);
+                break;
+
+            case 1:
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.35f);
+                break;
+
+            case 2:
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
                 break;
         }
     }
@@ -126,11 +147,12 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl1.Count == 0)
                 {
                     roomSaved.ambientLvl1 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl1);
+                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl1, roomSaved.intesitysLvl1, roomSaved.ambientLvl1);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl1);
+                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl1[0]);
                     GenerateExistentRooms(roomSaved.lvl1, roomSaved.lvl1.Count);
                 }
                 break;
@@ -138,11 +160,12 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl2.Count == 0)
                 {
                     roomSaved.ambientLvl2 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl2);
+                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl2, roomSaved.intesitysLvl2, roomSaved.ambientLvl2);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl2);
+                    SelectOldIntensity(roomSaved.ambientLvl2, roomSaved.intesitysLvl2[0]);
                     GenerateExistentRooms(roomSaved.lvl2, roomSaved.lvl2.Count);
                 }
                 break;
@@ -150,11 +173,12 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl3.Count == 0)
                 {
                     roomSaved.ambientLvl3 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl3);
+                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl3, roomSaved.intesitysLvl3, roomSaved.ambientLvl3);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl3);
+                    SelectOldIntensity(roomSaved.ambientLvl3, roomSaved.intesitysLvl3[0]);
                     GenerateExistentRooms(roomSaved.lvl3, roomSaved.lvl3.Count);
                 }
                 break;
@@ -162,11 +186,12 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl4.Count == 0)
                 {
                     roomSaved.ambientLvl4 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl4);
+                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl4, roomSaved.intesitysLvl4, roomSaved.ambientLvl4);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl4);
+                    SelectOldIntensity(roomSaved.ambientLvl4, roomSaved.intesitysLvl4[0]);
                     GenerateExistentRooms(roomSaved.lvl4, roomSaved.lvl4.Count);
                 }
                 break;
@@ -174,11 +199,12 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl5.Count == 0)
                 {
                     roomSaved.ambientLvl5 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl5);
+                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl5, roomSaved.intesitysLvl5,roomSaved.ambientLvl5);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl5);
+                    SelectOldIntensity(roomSaved.ambientLvl5, roomSaved.intesitysLvl5[0]);
                     GenerateExistentRooms(roomSaved.lvl5, roomSaved.lvl5.Count);
                 }
                 break;
@@ -193,7 +219,7 @@ public class RoomGeneration : MonoBehaviour
         }
     }
 
-    private void GenerateNewRooms(Dictionary<int, GameObject> roomDictionary, Dictionary<int, GameObject> lvl)
+    private void GenerateNewRooms(Dictionary<int, GameObject> roomDictionary, Dictionary<int, GameObject> lvl, List<int> intensities, Color ambient)
     {
         
         for (int i = 0; i < nLevelRooms; i++)
@@ -202,6 +228,7 @@ public class RoomGeneration : MonoBehaviour
             roomDictionary[room].transform.position = new Vector3(i * 100, 0, 0);
             Instantiate(roomDictionary[room]);
             lvl.Add(i,roomDictionary[room]);
+            intensities.Add(SelectNewIntensity(ambient));
         }
     }
 
