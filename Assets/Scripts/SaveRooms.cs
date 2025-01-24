@@ -11,4 +11,11 @@ public class SaveRooms : MonoBehaviour
     public Dictionary<int, GameObject> lvl4 = new Dictionary<int, GameObject>();
     public Dictionary<int, GameObject> lvl5 = new Dictionary<int, GameObject>();
 
+    [HideInInspector]
+    public int ambientLvl1;
+    public int ambientLvl2;
+    public int ambientLvl3;
+    public int ambientLvl4;
+    public int ambientLvl5;
+
 }

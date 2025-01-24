@@ -43,9 +43,37 @@ public class RoomGeneration : MonoBehaviour
 
     }
 
-    private void SelectAmbient()
+    private int SelectAmbient()
     {
         int ambient = Random.Range(0,5);
+
+        switch (ambient)
+        {
+            case 0:
+                Light.color = new Color(255, 0, 0);
+                break;
+
+            case 1:
+                Light.color = new Color(0f, 0f, 255f);
+                break;
+
+            case 2:
+                Light.color = new Color(0f, 255f, 0f);
+                break;
+
+            case 3:
+                Light.color = new Color(0f, 0f, 0f);
+                break;
+
+            case 4:
+                Light.color = new Color(0f, 255f, 255f);
+                break;
+
+        }
+        return ambient;
+    }
+    private void SelectOldAmbient(int ambient)
+    {
 
         switch (ambient)
         {
@@ -97,51 +125,60 @@ public class RoomGeneration : MonoBehaviour
             case 1:
                 if (roomSaved.lvl1.Count == 0)
                 {
+                    roomSaved.ambientLvl1 = SelectAmbient();
                     GenerateNewRooms(RoomsDictionary, roomSaved.lvl1);
                 }
                 else
                 {
+                    SelectOldAmbient(roomSaved.ambientLvl1);
                     GenerateExistentRooms(roomSaved.lvl1, roomSaved.lvl1.Count);
                 }
                 break;
             case 2:
                 if (roomSaved.lvl2.Count == 0)
-
                 {
+                    roomSaved.ambientLvl2 = SelectAmbient();
                     GenerateNewRooms(RoomsDictionary, roomSaved.lvl2);
                 }
                 else
                 {
+                    SelectOldAmbient(roomSaved.ambientLvl2);
                     GenerateExistentRooms(roomSaved.lvl2, roomSaved.lvl2.Count);
                 }
                 break;
             case 3:
                 if (roomSaved.lvl3.Count == 0)
                 {
+                    roomSaved.ambientLvl3 = SelectAmbient();
                     GenerateNewRooms(RoomsDictionary, roomSaved.lvl3);
                 }
                 else
                 {
+                    SelectOldAmbient(roomSaved.ambientLvl3);
                     GenerateExistentRooms(roomSaved.lvl3, roomSaved.lvl3.Count);
                 }
                 break;
             case 4:
                 if (roomSaved.lvl4.Count == 0)
                 {
+                    roomSaved.ambientLvl4 = SelectAmbient();
                     GenerateNewRooms(RoomsDictionary, roomSaved.lvl4);
                 }
                 else
                 {
+                    SelectOldAmbient(roomSaved.ambientLvl4);
                     GenerateExistentRooms(roomSaved.lvl4, roomSaved.lvl4.Count);
                 }
                 break;
             case 5:
                 if (roomSaved.lvl5.Count == 0)
                 {
+                    roomSaved.ambientLvl5 = SelectAmbient();
                     GenerateNewRooms(RoomsDictionary, roomSaved.lvl5);
                 }
                 else
                 {
+                    SelectOldAmbient(roomSaved.ambientLvl5);
                     GenerateExistentRooms(roomSaved.lvl5, roomSaved.lvl5.Count);
                 }
                 break;
@@ -158,7 +195,7 @@ public class RoomGeneration : MonoBehaviour
 
     private void GenerateNewRooms(Dictionary<int, GameObject> roomDictionary, Dictionary<int, GameObject> lvl)
     {
-        SelectAmbient();
+        
         for (int i = 0; i < nLevelRooms; i++)
         {
             int room = Random.Range(0, 5);
