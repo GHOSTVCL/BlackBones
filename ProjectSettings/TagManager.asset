@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - enemy
+  - Player_Atack
+  - playeratack
   layers:
   - Default
   - TransparentFX

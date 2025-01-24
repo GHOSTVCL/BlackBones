@@ -5,14 +5,14 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
-
+    [SerializeField] private Transform lightatack;
+    [SerializeField] private Transform heavyatack;
     private Rigidbody rb;
     private Vector3 moveInput;
     private float moveZ;
     private float moveX;
-
     private bool mirandoDerecha = true;
-
+    public float life = 3;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,6 +39,24 @@ public class player : MonoBehaviour
         {
             Flip();
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Atack(lightatack);
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Atack(heavyatack);
+        }
+    }
+    private void Atack(Transform atack)
+    {
+        atack.gameObject.SetActive(true);
+
+    }
+    private void DoneAtack(Transform atack)
+    {
+        atack.gameObject.SetActive(false);
     }
     private void Flip()
     {
@@ -46,5 +64,18 @@ public class player : MonoBehaviour
         Vector3 escala = transform.localScale;
         escala.x *= -1;
         transform.localScale = escala;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("enemy"))
+        {
+            life -= 1;
+
+            
+            if (life <= 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
     }
 }
