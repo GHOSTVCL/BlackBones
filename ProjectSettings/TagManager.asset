@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Door
   - enemy
-  - Player_Atack
-  - playeratack
+  - lightatack
+  - heavyatack
   layers:
   - Default
   - TransparentFX

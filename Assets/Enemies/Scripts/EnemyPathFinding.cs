@@ -53,15 +53,24 @@ public class EnemyPathFinding : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("playeratack"))
+        if (collider.gameObject.CompareTag("lightatack"))
         {
             life -= 1;
 
             Debug.Log(life);
-            if (life <= 0)
-            {
-                gameObject.SetActive(false);
-            }
+            
+        }
+        if (collider.gameObject.CompareTag("heavyatack"))
+        {
+            life -= 2;
+            Debug.Log(life);
+
+        }
+        if (life <= 0)
+        {
+            GameManager.instance.score += 500;
+            GameManager.instance.Adn += 500;
+            gameObject.SetActive(false);
         }
     }
 }

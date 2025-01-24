@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class player : MonoBehaviour
@@ -7,21 +8,33 @@ public class player : MonoBehaviour
     [SerializeField] private float speed = 3f;
     [SerializeField] private Transform lightatack;
     [SerializeField] private Transform heavyatack;
+    [SerializeField] private TextMeshProUGUI lifeText;
+    [SerializeField] private TextMeshProUGUI XpText;
     private Rigidbody rb;
     private Vector3 moveInput;
     private float moveZ;
     private float moveX;
     private bool mirandoDerecha = true;
-    public float life = 3;
+    public float maxlife = 3;
+    public float actuallife;
+    public bool isdeath = false;
+    public bool resetlife = false;
+    private Vector3 StartPosition;
+    public float Xp;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        actuallife = maxlife;
+        StartPosition = transform.position;
+        
     }
     private void Update()
     {
         moveZ = Input.GetAxis("Vertical");
         moveX = Input.GetAxis("Horizontal");
         moveInput = new Vector3(moveX, 0f, moveZ);
+        lifeText.text = "X" + GameManager.instance.lifes.ToString();
+        XpText.text = "X" + Xp.ToString();
     }
     private void FixedUpdate()
     {
@@ -42,21 +55,41 @@ public class player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Atack(lightatack);
+            StartCoroutine(Atack(lightatack));
         }
         if (Input.GetMouseButtonDown(1))
         {
-            Atack(heavyatack);
+            StartCoroutine(Atack(heavyatack));
         }
     }
-    private void Atack(Transform atack)
+    private IEnumerator Atack(Transform atack)
     {
         atack.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        atack.gameObject.SetActive(false);
+
 
     }
     private void DoneAtack(Transform atack)
     {
         atack.gameObject.SetActive(false);
+    }
+    public void Die()
+    {
+        if(GameManager.instance.lifes > 0)
+        {
+            gameObject.SetActive(false);
+            new WaitForSeconds(1f);
+            transform.position = StartPosition;
+            gameObject.SetActive(true);
+            actuallife = 3;
+            GameManager.instance.lifes -= 1;
+        }
+        else
+        {
+            //gameOverScreen
+        }
+        
     }
     private void Flip()
     {
@@ -69,12 +102,14 @@ public class player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("enemy"))
         {
-            life -= 1;
+            actuallife -= 1;
 
             
-            if (life <= 0)
+            if (actuallife <= 0)
             {
-                gameObject.SetActive(false);
+                isdeath = !isdeath;
+                Die();
+                
             }
         }
     }

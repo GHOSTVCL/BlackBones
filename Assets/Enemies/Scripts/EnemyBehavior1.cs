@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 
 public class EnemyBehavior1 : MonoBehaviour
 {
-    private player objetive;
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float DetectionRadius = 4f;
     [SerializeField] private Transform atack;
@@ -47,16 +46,20 @@ public class EnemyBehavior1 : MonoBehaviour
                 Flip();
             }
         }
-        if(distanceToPlayer <= 0.5)
+        if(distanceToPlayer <= 1)
         {
-            Atack();
+            StartCoroutine(Atack());
         }
 
         
     }
-    private void Atack()
+    private IEnumerator Atack()
     {
-
+        atack.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        atack.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        StopCoroutine(Atack());
     }
     private void Flip()
     {
@@ -68,15 +71,25 @@ public class EnemyBehavior1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("playeratack"))
+        if (collider.gameObject.CompareTag("lightatack"))
         {
             life -= 1;
 
             Debug.Log(life);
-            if (life <= 0)
-            {
-                gameObject.SetActive(false);
-            }
+            
+        }
+        if(collider.gameObject.CompareTag("heavyatack"))
+        {
+            life -= 2;
+            Debug.Log(life);
+            
+        }
+        if (life <= 0)
+        {
+            GameManager.instance.Adn += 1;
+            GameManager.instance.score += 500;
+            
+            Destroy(gameObject);
         }
     }
 }
