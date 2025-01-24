@@ -5,51 +5,58 @@ using UnityEngine.SceneManagement;
 
 public class Change_Room : MonoBehaviour
 {
-    private int levelCount;
+    private int roomCount;
+    public int levelCount;
     private GameObject rooms;
     private RoomGeneration roomGenerationCount;
 
     private void Start()
     {
+        roomCount = 1;
         levelCount = 1;
         rooms = GameObject.Find("RoomManager");
         roomGenerationCount = rooms.GetComponent<RoomGeneration>();
+        DontDestroyOnLoad(gameObject);
     }
     private void OnTriggerEnter(Collider collision)
     {
 
         if(collision.tag == "Door")
         {
-            if (roomGenerationCount.nLevelRooms != levelCount)
+            if (roomGenerationCount.nLevelRooms != roomCount)
             {
-                switch (levelCount)
+                switch (roomCount)
                 {
                     case 1:
-                        levelCount = 2;
-                        transform.position = new Vector3(15, 0, 0);
+                        roomCount = 2;
+                        transform.position = new Vector3(100, 1, 0);
                         break;
                     case 2:
-                        levelCount = 3;
-                        transform.position = new Vector3(15, 0, 0);
+                        roomCount = 3;
+                        transform.position = new Vector3(200, 1, 0);
                         break;
                     case 3:
-                        levelCount = 4;
-                        transform.position = new Vector3(25, 0, 0);
+                        roomCount = 4;
+                        transform.position = new Vector3(300, 1, 0);
                         break;
                     case 4:
-                        levelCount = 5;
-                        transform.position = new Vector3(35, 0, 0);
+                        roomCount = 5;
+                        transform.position = new Vector3(400, 1, 0);
                         break;
                     case 5:
-                        levelCount = 6;
-                        transform.position = new Vector3(45, 0, 0);
+                        roomCount = 6;
+                        transform.position = new Vector3(500, 1, 0);
                         break;
-
                 }
             }
             else
             {
-                SceneManager.LoadScene("SampleScene");
+                levelCount++;
+                //SceneManager.LoadScene("Level" + levelCount);
+                SceneManager.LoadScene("Level2");
+                roomCount = 1;
+                rooms = GameObject.Find("RoomManager");
+                roomGenerationCount = rooms.GetComponent<RoomGeneration>();
             }
         }
     }
