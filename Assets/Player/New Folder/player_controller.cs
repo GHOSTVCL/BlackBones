@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class player : MonoBehaviour
@@ -10,6 +11,14 @@ public class player : MonoBehaviour
     [SerializeField] private Transform heavyatack;
     [SerializeField] private TextMeshProUGUI lifeText;
     [SerializeField] private TextMeshProUGUI XpText;
+
+    [SerializeField] public Sprite FirePrefab;
+    [SerializeField] public Sprite WaterPrefab;
+    [SerializeField] public Sprite ToxicPrefab;
+    [SerializeField] public Sprite IcePrefab;
+    [SerializeField] public Sprite NightPrefab;
+    [SerializeField] public Sprite IdlePrefab;
+    private SpriteRenderer playerSprites;
     private Rigidbody rb;
     private Vector3 moveInput;
     private float moveZ;
@@ -21,12 +30,14 @@ public class player : MonoBehaviour
     public bool resetlife = false;
     private Vector3 StartPosition;
     public float Xp;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         actuallife = maxlife;
         StartPosition = transform.position;
-        
+        playerSprites = gameObject.GetComponent<SpriteRenderer>();
+        AsignSprite(Evolution());
     }
     private void Update()
     {
@@ -70,10 +81,6 @@ public class player : MonoBehaviour
 
 
     }
-    private void DoneAtack(Transform atack)
-    {
-        atack.gameObject.SetActive(false);
-    }
     public void Die()
     {
         if(GameManager.instance.lifes > 0)
@@ -97,6 +104,49 @@ public class player : MonoBehaviour
         Vector3 escala = transform.localScale;
         escala.x *= -1;
         transform.localScale = escala;
+    }
+    private void AsignSprite(int evolucion)
+    {
+        switch(evolucion)
+        {
+            case 1:
+                playerSprites.sprite = FirePrefab;
+                break;
+            case 2:
+                playerSprites.sprite = WaterPrefab;
+                break;
+            case 3:
+                playerSprites.sprite = ToxicPrefab;
+                break;
+            case 4:
+                playerSprites.sprite = IcePrefab;
+                break;
+            case 5:
+                playerSprites.sprite = NightPrefab;
+                break;
+
+
+        }
+    }
+    private int Evolution()
+    {
+        int[] valores = {EvolutionManager.instance.FireEvolution,
+            EvolutionManager.instance.WaterEvolution,
+            EvolutionManager.instance.ToxicEvolution,
+            EvolutionManager.instance.IceEvolution,
+            EvolutionManager.instance.nightEvolution};
+        int maximo = 0;
+        int prefab = 0;
+        for(int i = 0; i < valores.Length; i++)
+        {
+            if (valores[i] > maximo)
+            {
+                maximo = valores[i];
+                prefab = i;
+            }
+        }
+        return prefab + 1;
+
     }
     private void OnCollisionEnter(Collision collision)
     {

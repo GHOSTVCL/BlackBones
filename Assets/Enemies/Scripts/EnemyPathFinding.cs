@@ -69,7 +69,7 @@ public class EnemyPathFinding : MonoBehaviour
         if (life <= 0)
         {
             GameManager.instance.score += 500;
-            GameManager.instance.Adn += 500;
+            GameManager.instance.Adn += 1;
             gameObject.SetActive(false);
         }
     }
