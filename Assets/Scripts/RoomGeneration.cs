@@ -23,9 +23,7 @@ public class RoomGeneration : MonoBehaviour
     private GameObject intesityImage;
     private RawImage intesityCanvas;
 
-    [SerializeField] int level;
-
-    private GameObject player;
+    private GameObject roomManager;
     private SaveRooms roomSaved;
 
     private Dictionary<int,GameObject> RoomsDictionary = new Dictionary<int,GameObject>();
@@ -39,9 +37,9 @@ public class RoomGeneration : MonoBehaviour
         RoomsDictionary.Add(3, Room4);
         RoomsDictionary.Add(4, Room5);
 
-        player = GameObject.Find("Hero_Idle_0");
-        roomSaved = player.GetComponent<SaveRooms>();
-        intesityImage = GameObject.Find("RawImage");
+        roomManager = GameObject.Find("RoomManager");
+        roomSaved = roomManager.GetComponent<SaveRooms>();
+        intesityImage = GameObject.Find("Intensity");
         intesityCanvas = intesityImage.GetComponent<RawImage>();
 
         CheckRoomsExistence();
@@ -141,7 +139,7 @@ public class RoomGeneration : MonoBehaviour
     }
     private void CheckRoomsExistence()
     {
-        switch (level)
+        switch (roomSaved.levelCount)
         {
             case 1:
                 if (roomSaved.lvl1.Count == 0)
@@ -231,5 +229,4 @@ public class RoomGeneration : MonoBehaviour
             intensities.Add(SelectNewIntensity(ambient));
         }
     }
-
 }

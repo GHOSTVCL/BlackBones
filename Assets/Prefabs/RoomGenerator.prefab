@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1960477843706355414
+--- !u!1 &8662062325535803447
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3526247723594434451}
-  - component: {fileID: 8995016667186639762}
+  - component: {fileID: 1267843620360588862}
+  - component: {fileID: 8695223538777753135}
   m_Layer: 0
-  m_Name: RoomManager
+  m_Name: RoomGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3526247723594434451
+--- !u!4 &1267843620360588862
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960477843706355414}
+  m_GameObject: {fileID: 8662062325535803447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2044215, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8995016667186639762
+--- !u!114 &8695223538777753135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960477843706355414}
+  m_GameObject: {fileID: 8662062325535803447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70df452df5dd93748829beb4ae47113a, type: 3}
+  m_Script: {fileID: 11500000, guid: a898af5db8d5ab14ab29895f4c0a4014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientLvl1: {r: 0, g: 0, b: 0, a: 0}
-  ambientLvl2: {r: 0, g: 0, b: 0, a: 0}
-  ambientLvl3: {r: 0, g: 0, b: 0, a: 0}
-  ambientLvl4: {r: 0, g: 0, b: 0, a: 0}
-  ambientLvl5: {r: 0, g: 0, b: 0, a: 0}
-  intesitysLvl1: 
-  intesitysLvl2: 
-  intesitysLvl3: 
-  intesitysLvl4: 
-  intesitysLvl5: 
-  roomCount: 0
-  levelCount: 0
+  Room1: {fileID: 7022642798374802644, guid: 91ae65d38ef05f945826f3d24d6fb723, type: 3}
+  Room2: {fileID: 7022642798374802644, guid: f82a8b4196a91c04594b2eb6b81aefa9, type: 3}
+  Room3: {fileID: 7022642798374802644, guid: 5d589abb081f3bb46b6a3b74e8cb9db6, type: 3}
+  Room4: {fileID: 7022642798374802644, guid: 5785d608fd6308949ae77e8e6ebd7ee0, type: 3}
+  Room5: {fileID: 7022642798374802644, guid: 1b9e1cc94bbb0ff4fb59c0c63f0e31c6, type: 3}
+  nLevelRooms: 5
+  Light: {fileID: 0}
+  level: 1
