@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
+using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,14 +32,25 @@ public class player : MonoBehaviour
     public bool resetlife = false;
     private Vector3 StartPosition;
     public float Xp;
-    
+
+    [HideInInspector]
+    public bool slowed;
+
+    private int resistedIntensity;
+
+    private GameObject roomManager;
+    private SaveRooms roomSaved;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         actuallife = maxlife;
         StartPosition = transform.position;
         playerSprites = gameObject.GetComponent<SpriteRenderer>();
+        roomManager = GameObject.Find("RoomManager");
+        roomSaved = roomManager.GetComponent<SaveRooms>();
         AsignSprite(Evolution());
+        slowed = false;
     }
     private void Update()
     {
@@ -47,6 +59,7 @@ public class player : MonoBehaviour
         moveInput = new Vector3(moveX, 0f, moveZ);
         lifeText.text = "X" + GameManager.instance.lifes.ToString();
         XpText.text = "X" + Xp.ToString();
+        AmbientEffect(LevelAmbient(roomSaved.levelCount));
     }
     private void FixedUpdate()
     {
@@ -164,5 +177,216 @@ public class player : MonoBehaviour
                 
             }
         }
+    }
+
+    public int LevelIntensity()
+    {
+        int actualIntensity = 0;
+        switch (roomSaved.levelCount)
+        {
+            case 1:
+                actualIntensity = IntensityDebuff(roomSaved.roomCount,1);
+                    break;
+            case 2:
+                actualIntensity = IntensityDebuff(roomSaved.roomCount, 2);
+                break;
+            case 3:
+                actualIntensity = IntensityDebuff(roomSaved.roomCount, 3);
+                break;
+            case 4:
+                actualIntensity = IntensityDebuff(roomSaved.roomCount, 4);
+                break;
+            case 5:
+                actualIntensity = IntensityDebuff(roomSaved.roomCount, 5);
+                break;
+
+        }
+        return actualIntensity;
+    }
+
+    private int IntensityDebuff(int room, int level)
+    {
+        int actualIntensity = 0;
+        
+        switch(level)
+        {
+            case 1:
+               actualIntensity = roomSaved.intesitysLvl1[room -1];
+                break;
+            case 2:
+                actualIntensity = roomSaved.intesitysLvl2[room -1];
+                break;
+            case 3:
+                actualIntensity = roomSaved.intesitysLvl3[room -1];
+                break;
+            case 4:
+                actualIntensity = roomSaved.intesitysLvl4[room - 1];
+                break;
+            case 5:
+                actualIntensity = roomSaved.intesitysLvl5[room - 1];
+                break;
+        }
+
+        return actualIntensity;
+    }
+
+    public void EvolveResistance(Color ambient, int intensity)
+    {
+        if (ambient == new Color(1f, 0f, 0f, 0.1f))
+        {
+            if(EvolutionManager.instance.FireEvolution >= 1 && EvolutionManager.instance.FireEvolution < 5)
+            {
+                resistedIntensity = intensity - 1;
+            }
+            else if (EvolutionManager.instance.FireEvolution >= 5 && EvolutionManager.instance.FireEvolution < 9)
+            {
+                resistedIntensity = intensity - 2;
+            }
+            else if (EvolutionManager.instance.FireEvolution >= 9)
+            {
+                resistedIntensity = intensity - 3;
+            }
+            else
+            {
+                resistedIntensity = intensity;
+            }
+        }
+        if (ambient == new Color(0f, 0f, 1f, 0.1f))
+        {
+            if (EvolutionManager.instance.WaterEvolution >= 1 && EvolutionManager.instance.WaterEvolution < 5)
+            {
+                resistedIntensity = intensity - 1;
+            }
+            else if (EvolutionManager.instance.WaterEvolution >= 5 && EvolutionManager.instance.WaterEvolution < 9)
+            {
+                resistedIntensity = intensity - 2;
+            }
+            else if (EvolutionManager.instance.WaterEvolution >= 9)
+            {
+                resistedIntensity = intensity - 3;
+            }
+            else
+            {
+                resistedIntensity = intensity;
+            }
+        }
+        if (ambient == new Color(0f, 1f, 0f, 0.1f))
+        {
+            if (EvolutionManager.instance.ToxicEvolution >= 1 && EvolutionManager.instance.ToxicEvolution < 5)
+            {
+                resistedIntensity = intensity - 1;
+            }
+            else if (EvolutionManager.instance.ToxicEvolution >= 5 && EvolutionManager.instance.ToxicEvolution < 9)
+            {
+                resistedIntensity = intensity - 2;
+            }
+            else if (EvolutionManager.instance.ToxicEvolution >= 9)
+            {
+                resistedIntensity = intensity - 3;
+            }
+            else
+            {
+                resistedIntensity = intensity;
+            }
+        }
+        if (ambient == new Color(0f, 0f, 0f, 0.1f))
+        {
+            if (EvolutionManager.instance.nightEvolution >= 1 && EvolutionManager.instance.nightEvolution < 5)
+            {
+                resistedIntensity = intensity - 1;
+            }
+            else if (EvolutionManager.instance.nightEvolution >= 5 && EvolutionManager.instance.nightEvolution < 9)
+            {
+                resistedIntensity = intensity - 2;
+            }
+            else if (EvolutionManager.instance.nightEvolution >= 9)
+            {
+                resistedIntensity = intensity - 3;
+            }
+            else
+            {
+                resistedIntensity = intensity;
+            }
+        }
+        if (ambient == new Color(0f, 1f, 1f, 0.1f))
+        {
+            if (EvolutionManager.instance.IceEvolution >= 1 && EvolutionManager.instance.IceEvolution < 5)
+            {
+                resistedIntensity = intensity - 1;
+            }
+            else if (EvolutionManager.instance.IceEvolution >= 5 && EvolutionManager.instance.IceEvolution < 9)
+            {
+                resistedIntensity = intensity - 2;
+            }
+            else if (EvolutionManager.instance.IceEvolution >= 9)
+            {
+                resistedIntensity = intensity - 3;
+            }
+            else
+            {
+                resistedIntensity = intensity;
+            }
+        }
+        if (resistedIntensity < 0)
+        {
+            resistedIntensity = 0;
+        }
+    }
+
+    public void AmbientEffect(Color ambient)
+    {
+        if (ambient == new Color(1f, 0f, 0f, 0.1f))
+        {
+            actuallife = -1 * resistedIntensity;
+        }
+        if (ambient == new Color(0f, 0f, 1f, 0.1f))
+        {
+            if(slowed == false && resistedIntensity != 0)
+            {
+                speed = speed -(float)(2 * resistedIntensity) ;
+                slowed = true;
+            }
+        }
+        if (ambient == new Color(0f, 1f, 0f, 0.1f))
+        {
+            actuallife = -1 * resistedIntensity;
+        }
+        if (ambient == new Color(0f, 0f, 0f, 0.1f))
+        {
+        }
+        if (ambient == new Color(0f, 1f, 1f, 0.1f))
+        {
+            if (slowed == false && resistedIntensity != 0)
+            {
+                speed = speed - (float)(2 * resistedIntensity);
+                slowed = true;
+            }
+        }
+    }
+
+    public Color LevelAmbient(int level)
+    {
+        Color ambient = Color.white;
+
+        switch (level)
+        {
+            case 1:
+                ambient = roomSaved.ambientLvl1;
+                break;
+            case 2:
+                ambient = roomSaved.ambientLvl2;
+                break;
+            case 3:
+                ambient = roomSaved.ambientLvl3;
+                break;
+            case 4:
+                ambient = roomSaved.ambientLvl4;
+                break;
+            case 5:
+                ambient = roomSaved.ambientLvl5;
+                break;
+        }
+
+        return ambient;
     }
 }

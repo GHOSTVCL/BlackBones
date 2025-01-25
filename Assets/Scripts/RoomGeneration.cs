@@ -115,7 +115,7 @@ public class RoomGeneration : MonoBehaviour
                 break;
 
             case 2:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
                 break;
         }
         return intesityR;

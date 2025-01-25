@@ -10,12 +10,21 @@ public class Change_Room : MonoBehaviour
     private GameObject roomManager;
     private SaveRooms savedRooms;
 
+    private GameObject player;
+    private player playerController;
+
+
     private void Start()
     {
         rooms = GameObject.Find("RoomGenerator");
         roomManager = GameObject.Find("RoomManager");
+        player = GameObject.Find("Rename");
+
         roomGenerationCount = rooms.GetComponent<RoomGeneration>();
         savedRooms = roomManager.GetComponent<SaveRooms>();
+        playerController = player.GetComponent<player>();
+        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+
         gameObject.transform.position = new Vector3(0, 2, 0);
     }
     private void OnTriggerEnter(Collider collision)
@@ -34,26 +43,36 @@ public class Change_Room : MonoBehaviour
                         savedRooms.roomCount = 2;
                         transform.position = new Vector3(200, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
+                        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount),playerController.LevelIntensity());
+                        playerController.slowed = false;
                         break;
                     case 2:
                         savedRooms.roomCount = 3;
                         transform.position = new Vector3(400, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
+                        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                        playerController.slowed = false;
                         break;
                     case 3:
                         savedRooms.roomCount = 4;
                         transform.position = new Vector3(600, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
+                        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                        playerController.slowed = false;
                         break;
                     case 4:
                         savedRooms.roomCount = 5;
                         transform.position = new Vector3(800, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
+                        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                        playerController.slowed = false;
                         break;
                     case 5:
                         savedRooms.roomCount = 6;
                         transform.position = new Vector3(1000, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
+                        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                        playerController.slowed = false;
                         break;
                 }
             }
@@ -85,4 +104,6 @@ public class Change_Room : MonoBehaviour
                 break;
         }
     }
+
+    
 }
