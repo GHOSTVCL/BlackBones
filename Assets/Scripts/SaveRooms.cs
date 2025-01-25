@@ -41,11 +41,11 @@ public class SaveRooms : MonoBehaviour
     [HideInInspector]
     public int roomCount;
     [HideInInspector]
-    public int levelCount;
+    public int levelCount = 1;
 
-    private void Start()
+    private void Awake()
     {
-        levelCount = 1;
+        //levelCount = 1;
         roomCount = 1;
         DontDestroyOnLoad(gameObject);
     }

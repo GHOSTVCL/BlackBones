@@ -54,24 +54,24 @@ public class RoomGeneration : MonoBehaviour
         switch (ambient)
         {
             case 0:
-                Light.color = ambientColor = new Color(255, 0, 0);
+                Light.color = ambientColor = new Color(1f, 0f, 0f, 0.1f);
 
                 break;
 
             case 1:
-                Light.color = ambientColor = new Color(0f, 0f, 255f);
+                Light.color = ambientColor = new Color(0f, 0f, 1f, 0.1f);
                 break;
 
             case 2:
-                Light.color = ambientColor = new Color(0f, 255f, 0f);
+                Light.color = ambientColor = new Color(0f, 1f, 0f,0.1f);
                 break;
 
             case 3:
-                Light.color = ambientColor = new Color(0f, 0f, 0f);
+                Light.color = ambientColor = new Color(0f, 0f, 0f, 0.1f);
                 break;
 
             case 4:
-                Light.color = ambientColor = new Color(0f, 255f, 255f);
+                Light.color = ambientColor = new Color(0f, 1f, 1f, 0.1f);
                 break;
 
         }
@@ -79,23 +79,23 @@ public class RoomGeneration : MonoBehaviour
     }
     private void SelectOldAmbient(Color ambient)
     {
-        if (ambient == new Color(255f, 0f, 0f))
+        if (ambient == new Color(1f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
         }
-        if (ambient == new Color(0f,0f,255f))
+        if (ambient == new Color(0f,0f,1f, 0.1f))
         {
            Light.color = ambient;
         }
-        if(ambient == new Color(0f,255f,0f))
+        if(ambient == new Color(0f,1f,0f, 0.1f))
         {
             Light.color = ambient;
         }
-        if (ambient == new Color(0f, 0f, 0f))
+        if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
         }
-        if (ambient == new Color(0f, 255f, 255f))
+        if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
             Light.color = ambient;
         }
@@ -139,6 +139,10 @@ public class RoomGeneration : MonoBehaviour
     }
     private void CheckRoomsExistence()
     {
+        if(roomSaved.levelCount == 0)
+        {
+            roomSaved.levelCount = 1;
+        }
         switch (roomSaved.levelCount)
         {
             case 1:
