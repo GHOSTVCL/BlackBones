@@ -22,6 +22,10 @@ public class Change_Room : MonoBehaviour
     {
         if(collision.tag == "Door")
         {
+            if(savedRooms.roomCount == 0)
+            {
+                savedRooms.roomCount = 1;
+            }
             if (roomGenerationCount.nLevelRooms != savedRooms.roomCount)
             {
                 switch (savedRooms.roomCount)

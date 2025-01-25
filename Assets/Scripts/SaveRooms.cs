@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SaveRooms : MonoBehaviour
 {
+
+    public static SaveRooms instance { get; private set; }
+
     [HideInInspector] 
     public Dictionary<int, GameObject> lvl1 = new Dictionary<int, GameObject>();
     [HideInInspector]
@@ -45,8 +48,17 @@ public class SaveRooms : MonoBehaviour
 
     private void Awake()
     {
-        //levelCount = 1;
-        roomCount = 1;
-        DontDestroyOnLoad(gameObject);
+        if(instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+            roomCount = 1;
+            levelCount = 1;
+
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

@@ -1446,6 +1446,7 @@ GameObject:
   - component: {fileID: 459809758}
   - component: {fileID: 459809757}
   - component: {fileID: 459809756}
+  - component: {fileID: 459809759}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -1516,7 +1517,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 459809757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 459809759}
+        m_TargetAssemblyTypeName: NextLevel, Assembly-CSharp
+        m_MethodName: NextLevelFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &459809757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,6 +1568,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459809754}
   m_CullTransparentMesh: 1
+--- !u!114 &459809759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459809754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2c9af83ace42541b06a3f33a1e3c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &520690266 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3714466827608209865, guid: da76fe7ca18e49d4baf0cca7a0144a83, type: 3}
@@ -3086,7 +3111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  highscore: 0
   Adn: 0
   lifes: 3
   currentLevel: 0
