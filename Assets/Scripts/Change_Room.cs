@@ -16,8 +16,7 @@ public class Change_Room : MonoBehaviour
         roomManager = GameObject.Find("RoomManager");
         roomGenerationCount = rooms.GetComponent<RoomGeneration>();
         savedRooms = roomManager.GetComponent<SaveRooms>();
-        DontDestroyOnLoad(gameObject);
-        gameObject.transform.position = new Vector3(0, 1, 0);
+        gameObject.transform.position = new Vector3(0, 2, 0);
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -29,27 +28,27 @@ public class Change_Room : MonoBehaviour
                 {
                     case 1:
                         savedRooms.roomCount = 2;
-                        transform.position = new Vector3(100, 1, 0);
+                        transform.position = new Vector3(200, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                         break;
                     case 2:
                         savedRooms.roomCount = 3;
-                        transform.position = new Vector3(200, 1, 0);
+                        transform.position = new Vector3(400, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                         break;
                     case 3:
                         savedRooms.roomCount = 4;
-                        transform.position = new Vector3(300, 1, 0);
+                        transform.position = new Vector3(600, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                         break;
                     case 4:
                         savedRooms.roomCount = 5;
-                        transform.position = new Vector3(400, 1, 0);
+                        transform.position = new Vector3(800, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                         break;
                     case 5:
                         savedRooms.roomCount = 6;
-                        transform.position = new Vector3(500, 1, 0);
+                        transform.position = new Vector3(1000, 2, 0);
                         IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                         break;
                 }

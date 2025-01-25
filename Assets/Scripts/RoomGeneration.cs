@@ -54,24 +54,24 @@ public class RoomGeneration : MonoBehaviour
         switch (ambient)
         {
             case 0:
-                Light.color = ambientColor = new Color(255, 0, 0);
+                Light.color = ambientColor = new Color(1f, 0f, 0f, 0.1f);
 
                 break;
 
             case 1:
-                Light.color = ambientColor = new Color(0f, 0f, 255f);
+                Light.color = ambientColor = new Color(0f, 0f, 1f, 0.1f);
                 break;
 
             case 2:
-                Light.color = ambientColor = new Color(0f, 255f, 0f);
+                Light.color = ambientColor = new Color(0f, 1f, 0f,0.1f);
                 break;
 
             case 3:
-                Light.color = ambientColor = new Color(0f, 0f, 0f);
+                Light.color = ambientColor = new Color(0f, 0f, 0f, 0.1f);
                 break;
 
             case 4:
-                Light.color = ambientColor = new Color(0f, 255f, 255f);
+                Light.color = ambientColor = new Color(0f, 1f, 1f, 0.1f);
                 break;
 
         }
@@ -79,23 +79,23 @@ public class RoomGeneration : MonoBehaviour
     }
     private void SelectOldAmbient(Color ambient)
     {
-        if (ambient == new Color(255f, 0f, 0f))
+        if (ambient == new Color(1f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
         }
-        if (ambient == new Color(0f,0f,255f))
+        if (ambient == new Color(0f,0f,1f, 0.1f))
         {
            Light.color = ambient;
         }
-        if(ambient == new Color(0f,255f,0f))
+        if(ambient == new Color(0f,1f,0f, 0.1f))
         {
             Light.color = ambient;
         }
-        if (ambient == new Color(0f, 0f, 0f))
+        if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
         }
-        if (ambient == new Color(0f, 255f, 255f))
+        if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
             Light.color = ambient;
         }
@@ -107,15 +107,15 @@ public class RoomGeneration : MonoBehaviour
         switch (intesityR)
         {
             case 0:
-               intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.1f);
+               intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.0f);
                 break;
 
             case 1:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.35f);
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
                 break;
 
             case 2:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
                 break;
         }
         return intesityR;
@@ -139,6 +139,10 @@ public class RoomGeneration : MonoBehaviour
     }
     private void CheckRoomsExistence()
     {
+        if(roomSaved.levelCount == 0)
+        {
+            roomSaved.levelCount = 1;
+        }
         switch (roomSaved.levelCount)
         {
             case 1:
@@ -212,7 +216,7 @@ public class RoomGeneration : MonoBehaviour
     {
         for (int i = 0; i < nRooms; i++)
         {
-            roomDictionary[i].transform.position = new Vector3(i * 100, 0, 0);
+            roomDictionary[i].transform.position = new Vector3(i * 200, 0, 0);
             Instantiate(roomDictionary[i]);
         }
     }
@@ -223,7 +227,7 @@ public class RoomGeneration : MonoBehaviour
         for (int i = 0; i < nLevelRooms; i++)
         {
             int room = Random.Range(0, 5);
-            roomDictionary[room].transform.position = new Vector3(i * 100, 0, 0);
+            roomDictionary[room].transform.position = new Vector3(i * 200, 0, 0);
             Instantiate(roomDictionary[room]);
             lvl.Add(i,roomDictionary[room]);
             intensities.Add(SelectNewIntensity(ambient));
