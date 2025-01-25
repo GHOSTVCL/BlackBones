@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EvolveScene.unity
     guid: 1878fb81b001eb844a96fe6558020a58
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 9e6399f88c470564e85813facd9c33a9
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: 82ad15e877fd71b49925d294dd612186
   m_configObjects: {}
