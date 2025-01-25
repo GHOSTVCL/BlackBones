@@ -107,15 +107,15 @@ public class RoomGeneration : MonoBehaviour
         switch (intesityR)
         {
             case 0:
-               intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.1f);
+               intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.0f);
                 break;
 
             case 1:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.35f);
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
                 break;
 
             case 2:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
+                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
                 break;
         }
         return intesityR;
@@ -212,7 +212,7 @@ public class RoomGeneration : MonoBehaviour
     {
         for (int i = 0; i < nRooms; i++)
         {
-            roomDictionary[i].transform.position = new Vector3(i * 100, 0, 0);
+            roomDictionary[i].transform.position = new Vector3(i * 200, 0, 0);
             Instantiate(roomDictionary[i]);
         }
     }
@@ -223,7 +223,7 @@ public class RoomGeneration : MonoBehaviour
         for (int i = 0; i < nLevelRooms; i++)
         {
             int room = Random.Range(0, 5);
-            roomDictionary[room].transform.position = new Vector3(i * 100, 0, 0);
+            roomDictionary[room].transform.position = new Vector3(i * 200, 0, 0);
             Instantiate(roomDictionary[room]);
             lvl.Add(i,roomDictionary[room]);
             intensities.Add(SelectNewIntensity(ambient));

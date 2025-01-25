@@ -44,11 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a898af5db8d5ab14ab29895f4c0a4014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Room1: {fileID: 7022642798374802644, guid: 91ae65d38ef05f945826f3d24d6fb723, type: 3}
-  Room2: {fileID: 7022642798374802644, guid: f82a8b4196a91c04594b2eb6b81aefa9, type: 3}
-  Room3: {fileID: 7022642798374802644, guid: 5d589abb081f3bb46b6a3b74e8cb9db6, type: 3}
-  Room4: {fileID: 7022642798374802644, guid: 5785d608fd6308949ae77e8e6ebd7ee0, type: 3}
-  Room5: {fileID: 7022642798374802644, guid: 1b9e1cc94bbb0ff4fb59c0c63f0e31c6, type: 3}
+  Room1: {fileID: 6621415880595372752, guid: aae82e36d216b5f4e811d3895bd734b8, type: 3}
+  Room2: {fileID: 6942014900887433583, guid: 12308b73e15683b46a0dd6ee6c089c3f, type: 3}
+  Room3: {fileID: 6388976242149961330, guid: 445f072f2852d0042a89395ed5e5d982, type: 3}
+  Room4: {fileID: 7920969857773195530, guid: 4ef39f45f1069f140b85a523fb7bb859, type: 3}
+  Room5: {fileID: 7900135600459641841, guid: b06b57b0c8867d742bc3837ff45c0b5e, type: 3}
   nLevelRooms: 5
   Light: {fileID: 0}
-  level: 1
