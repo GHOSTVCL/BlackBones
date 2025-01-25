@@ -406,8 +406,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireEvolution: 40
-  WaterEvolution: 6
-  ToxicEvolution: 0
+  WaterEvolution: 0
+  ToxicEvolution: 26
   IceEvolution: 0
   nightEvolution: 0
 --- !u!1 &324584763
@@ -795,11 +795,12 @@ MonoBehaviour:
   IcePrefab: {fileID: 21300000, guid: 3299176299715ce4399cac1528ead209, type: 3}
   NightPrefab: {fileID: 21300000, guid: a4bcd72214be63349abe89500112145a, type: 3}
   IdlePrefab: {fileID: 21300000, guid: 41062e3ba39762a43b92c95e12f595d9, type: 3}
-  maxlife: 3
-  actuallife: 0
+  maxlife: 1000
+  actuallife: 1000
   isdeath: 0
   resetlife: 0
   Xp: 0
+  slowed: 0
 --- !u!212 &585551531
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1739,6 +1740,10 @@ PrefabInstance:
       propertyPath: Light
       value: 
       objectReference: {fileID: 1668575304}
+    - target: {fileID: 8695223538777753135, guid: d44ed33b1c151264885bda3d51bb9b8e, type: 3}
+      propertyPath: nLevelRooms
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2107,7 +2112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  highscore: 0
   Adn: 0
   lifes: 3
   currentLevel: 0
