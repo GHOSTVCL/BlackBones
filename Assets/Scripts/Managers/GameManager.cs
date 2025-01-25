@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public float score = 0;
     public float highscore;
-    public float Adn = 0;
+    public int Adn = 0;
     public float lifes = 3;
     public float currentLevel;
     public float time = 0;
