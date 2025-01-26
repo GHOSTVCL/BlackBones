@@ -24,7 +24,7 @@ public class AmbientSimbol : MonoBehaviour
    private void AsignSimbol(Color Ambient)
     {
         Color actualcolor = Ambient;
-       if(actualcolor == new Color(1f, 0f, 0f, 0.0f))
+       if(actualcolor == new Color(1f, 0f, 0f, 0.1f))
         {
             Fire.gameObject.SetActive(true);
             Water.gameObject.SetActive(false);
@@ -32,7 +32,7 @@ public class AmbientSimbol : MonoBehaviour
             Toxic.gameObject.SetActive(false);
             Night.gameObject.SetActive(false);
         }
-        else if (actualcolor == new Color(0f, 0f, 1f, 0.0f))
+        else if (actualcolor == new Color(0f, 0f, 1f, 0.1f))
         {
             Fire.gameObject.SetActive(false);
             Water.gameObject.SetActive(true);
@@ -40,15 +40,7 @@ public class AmbientSimbol : MonoBehaviour
             Toxic.gameObject.SetActive(false);
             Night.gameObject.SetActive(false);
         }
-        else if (actualcolor == new Color(1f, 0f, 0f, 0.0f))
-        {
-            Fire.gameObject.SetActive(false);
-            Water.gameObject.SetActive(false);
-            Ice.gameObject.SetActive(true);
-            Toxic.gameObject.SetActive(false);
-            Night.gameObject.SetActive(false);
-        }
-        else if (actualcolor == new Color(0f, 1f, 1f, 0.0f))
+        else if (actualcolor == new Color(0f, 0f, 1f, 0.1f))
         {
             Fire.gameObject.SetActive(false);
             Water.gameObject.SetActive(false);
@@ -56,7 +48,15 @@ public class AmbientSimbol : MonoBehaviour
             Toxic.gameObject.SetActive(true);
             Night.gameObject.SetActive(false);
         }
-        else if (actualcolor == new Color(0f, 0f, 0f, 0.0f))
+        else if (actualcolor == new Color(0f, 1f, 1f, 0.1f))
+        {
+            Fire.gameObject.SetActive(false);
+            Water.gameObject.SetActive(false);
+            Ice.gameObject.SetActive(true);
+            Toxic.gameObject.SetActive(false);
+            Night.gameObject.SetActive(false);
+        }
+        else if (actualcolor == new Color(0f, 0f, 0f, 0.1f))
         {
             Fire.gameObject.SetActive(false);
             Water.gameObject.SetActive(false);
