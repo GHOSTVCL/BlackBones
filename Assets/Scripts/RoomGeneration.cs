@@ -26,16 +26,16 @@ public class RoomGeneration : MonoBehaviour
     private GameObject roomManager;
     private SaveRooms roomSaved;
 
-    private Dictionary<int,GameObject> RoomsDictionary = new Dictionary<int,GameObject>();
+    private Dictionary<int,GameObject> FireDictionary = new Dictionary<int,GameObject>();
+    private Dictionary<int, GameObject> WaterDictionary = new Dictionary<int, GameObject>();
+    private Dictionary<int, GameObject> ToxicDictionary = new Dictionary<int, GameObject>();
+    private Dictionary<int, GameObject> DarkDictionary = new Dictionary<int, GameObject>();
+    private Dictionary<int, GameObject> IceDictionary = new Dictionary<int, GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        RoomsDictionary.Add(0, Room1);
-        RoomsDictionary.Add(1, Room2);
-        RoomsDictionary.Add(2, Room3);
-        RoomsDictionary.Add(3, Room4);
-        RoomsDictionary.Add(4, Room5);
+        AddRoomsToDictionary();
 
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
@@ -149,65 +149,65 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl1.Count == 0)
                 {
                     roomSaved.ambientLvl1 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl1, roomSaved.intesitysLvl1, roomSaved.ambientLvl1);
+                    GenerateNewRooms(roomSaved.lvl1, roomSaved.intesitysLvl1, roomSaved.ambientLvl1, roomSaved.nRoomsPerLevel[0]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl1);
                     SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl1[0]);
-                    GenerateExistentRooms(roomSaved.lvl1, roomSaved.lvl1.Count);
+                    GenerateExistentRooms(roomSaved.lvl1, roomSaved.nRoomsPerLevel[0]);
                 }
                 break;
             case 2:
                 if (roomSaved.lvl2.Count == 0)
                 {
                     roomSaved.ambientLvl2 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl2, roomSaved.intesitysLvl2, roomSaved.ambientLvl2);
+                    GenerateNewRooms(roomSaved.lvl2, roomSaved.intesitysLvl2, roomSaved.ambientLvl2, roomSaved.nRoomsPerLevel[1]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl2);
                     SelectOldIntensity(roomSaved.ambientLvl2, roomSaved.intesitysLvl2[0]);
-                    GenerateExistentRooms(roomSaved.lvl2, roomSaved.lvl2.Count);
+                    GenerateExistentRooms(roomSaved.lvl2, roomSaved.nRoomsPerLevel[1]);
                 }
                 break;
             case 3:
                 if (roomSaved.lvl3.Count == 0)
                 {
                     roomSaved.ambientLvl3 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl3, roomSaved.intesitysLvl3, roomSaved.ambientLvl3);
+                    GenerateNewRooms(roomSaved.lvl3, roomSaved.intesitysLvl3, roomSaved.ambientLvl3, roomSaved.nRoomsPerLevel[3]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl3);
                     SelectOldIntensity(roomSaved.ambientLvl3, roomSaved.intesitysLvl3[0]);
-                    GenerateExistentRooms(roomSaved.lvl3, roomSaved.lvl3.Count);
+                    GenerateExistentRooms(roomSaved.lvl3, roomSaved.nRoomsPerLevel[2]);
                 }
                 break;
             case 4:
                 if (roomSaved.lvl4.Count == 0)
                 {
                     roomSaved.ambientLvl4 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl4, roomSaved.intesitysLvl4, roomSaved.ambientLvl4);
+                    GenerateNewRooms(roomSaved.lvl4, roomSaved.intesitysLvl4, roomSaved.ambientLvl4, roomSaved.nRoomsPerLevel[3]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl4);
                     SelectOldIntensity(roomSaved.ambientLvl4, roomSaved.intesitysLvl4[0]);
-                    GenerateExistentRooms(roomSaved.lvl4, roomSaved.lvl4.Count);
+                    GenerateExistentRooms(roomSaved.lvl4, roomSaved.nRoomsPerLevel[3]);
                 }
                 break;
             case 5:
                 if (roomSaved.lvl5.Count == 0)
                 {
                     roomSaved.ambientLvl5 = SelectAmbient();
-                    GenerateNewRooms(RoomsDictionary, roomSaved.lvl5, roomSaved.intesitysLvl5,roomSaved.ambientLvl5);
+                    GenerateNewRooms(roomSaved.lvl5, roomSaved.intesitysLvl5,roomSaved.ambientLvl5, roomSaved.nRoomsPerLevel[4]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl5);
                     SelectOldIntensity(roomSaved.ambientLvl5, roomSaved.intesitysLvl5[0]);
-                    GenerateExistentRooms(roomSaved.lvl5, roomSaved.lvl5.Count);
+                    GenerateExistentRooms(roomSaved.lvl5, roomSaved.nRoomsPerLevel[4]);
                 }
                 break;
         }
@@ -221,16 +221,76 @@ public class RoomGeneration : MonoBehaviour
         }
     }
 
-    private void GenerateNewRooms(Dictionary<int, GameObject> roomDictionary, Dictionary<int, GameObject> lvl, List<int> intensities, Color ambient)
+    private void GenerateNewRooms(Dictionary<int, GameObject> lvl, List<int> intensities, Color ambient, int nRooms)
     {
-        
-        for (int i = 0; i < nLevelRooms; i++)
+        Dictionary<int, GameObject> roomDictionary = SelectDictionary(ambient);
+
+        for (int i = 0; i < nRooms; i++)
         {
-            int room = Random.Range(0, 5);
+            int room = Random.Range(0, 4);
             roomDictionary[room].transform.position = new Vector3(i * 200, 0, 0);
             Instantiate(roomDictionary[room]);
             lvl.Add(i,roomDictionary[room]);
             intensities.Add(SelectNewIntensity(ambient));
         }
+    }
+
+    private void AddRoomsToDictionary()
+    {
+        FireDictionary.Add(0, Room1);
+        FireDictionary.Add(1, Room1);
+        FireDictionary.Add(2, Room1);
+        FireDictionary.Add(3, Room1);
+        FireDictionary.Add(4, Room1);
+
+        WaterDictionary.Add(0, Room2);
+        WaterDictionary.Add(1, Room2);
+        WaterDictionary.Add(2, Room2);
+        WaterDictionary.Add(3, Room2);
+        WaterDictionary.Add(4, Room2);
+
+        ToxicDictionary.Add(0, Room3);
+        ToxicDictionary.Add(1, Room3);
+        ToxicDictionary.Add(2, Room3);
+        ToxicDictionary.Add(3, Room3);
+        ToxicDictionary.Add(4, Room3);
+
+        DarkDictionary.Add(0, Room4);
+        DarkDictionary.Add(1, Room4);
+        DarkDictionary.Add(2, Room4);
+        DarkDictionary.Add(3, Room4);
+        DarkDictionary.Add(4, Room4);
+
+        IceDictionary.Add(0, Room5);
+        IceDictionary.Add(1, Room5);
+        IceDictionary.Add(2, Room5);
+        IceDictionary.Add(3, Room5);
+        IceDictionary.Add(4, Room5);
+    }
+
+    private Dictionary<int, GameObject> SelectDictionary(Color ambient)
+    {
+        Dictionary<int, GameObject> roomDictionary = new Dictionary<int, GameObject>();
+        if (ambient == new Color(1f, 0f, 0f, 0.1f))
+        {
+            roomDictionary = FireDictionary;
+        }
+        else if (ambient == new Color(0f, 0f, 1f, 0.1f))
+        {
+            roomDictionary = WaterDictionary;
+        }
+        else if (ambient == new Color(0f, 1f, 0f, 0.1f))
+        {
+            roomDictionary = ToxicDictionary;
+        }
+        else if (ambient == new Color(0f, 0f, 0f, 0.1f))
+        {
+            roomDictionary = DarkDictionary;
+        }
+        else if (ambient == new Color(0f, 1f, 1f, 0.1f))
+        {
+            roomDictionary = IceDictionary;
+        }
+        return roomDictionary;
     }
 }

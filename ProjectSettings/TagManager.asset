@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - lightatack
   - heavyatack
+  - FirstDoor
   layers:
   - Default
   - TransparentFX

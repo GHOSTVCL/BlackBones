@@ -18,7 +18,8 @@ public class NextLevel : MonoBehaviour
     public void NextLevelFunction()
     {
         saveRooms.levelCount++;
-        SceneManager.LoadScene("LevelScene");
         saveRooms.roomCount = 1;
+        SceneManager.LoadScene("LevelScene");
+        
     }
 }

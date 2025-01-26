@@ -45,6 +45,8 @@ public class SaveRooms : MonoBehaviour
     public int roomCount;
     [HideInInspector]
     public int levelCount = 1;
+    
+    public List<int> nRoomsPerLevel = new List<int>();
 
     private void Awake()
     {
