@@ -160,7 +160,7 @@ public class player : MonoBehaviour
         {
             case 1:
                 playerSprites.sprite = FirePrefab;
-                
+                Animations.SetBool("Fire", true);
                 break;
             case 2:
                 playerSprites.sprite = WaterPrefab;
