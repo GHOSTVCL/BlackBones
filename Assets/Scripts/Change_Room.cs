@@ -12,14 +12,33 @@ public class Change_Room : MonoBehaviour
 
     private player playerController;
 
+    private AmbientSimbol simbol;
+
+    private bool aaaaa = false;
+
 
     private void Start()
     {
         roomManager = GameObject.Find("RoomManager");
         savedRooms = roomManager.GetComponent<SaveRooms>();
         playerController = gameObject.GetComponent<player>();
-
+        simbol = gameObject.AddComponent<AmbientSimbol>();
+        aaaaa = false;
+        if (savedRooms.intesitysLvl1.Count != 0)
+        {
+            playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+            aaaaa = true;
+        }
         gameObject.transform.position = new Vector3(0, 2, 0);
+
+    }
+    private void Update()
+    {
+        if(aaaaa == false)
+        {
+            playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+            aaaaa = true;
+        }
     }
     private void OnTriggerEnter(Collider collision)
     {
@@ -32,9 +51,9 @@ public class Change_Room : MonoBehaviour
             if (savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1] != savedRooms.roomCount)
             {
                 transform.position = new Vector3(savedRooms.roomCount * 200, 2, 0);
-                savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                 savedRooms.roomCount++;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
                 playerController.slowed = false;
             }
             else

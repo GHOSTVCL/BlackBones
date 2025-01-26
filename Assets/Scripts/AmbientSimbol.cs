@@ -40,7 +40,7 @@ public class AmbientSimbol : MonoBehaviour
             Toxic.gameObject.SetActive(false);
             Night.gameObject.SetActive(false);
         }
-        else if (actualcolor == new Color(0f, 0f, 1f, 0.1f))
+        else if (actualcolor == new Color(0f, 1f, 0f, 0.1f))
         {
             Fire.gameObject.SetActive(false);
             Water.gameObject.SetActive(false);

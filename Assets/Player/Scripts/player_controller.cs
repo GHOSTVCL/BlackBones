@@ -53,6 +53,7 @@ public class player : MonoBehaviour
         playerSprites = gameObject.GetComponent<SpriteRenderer>();
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
+        //EvolveResistance(LevelAmbient(roomSaved.levelCount), LevelIntensity());
         AsignSprite(Evolution());
         slowed = false;
     }
@@ -294,6 +295,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
+            //if (Evolution() == 1)
+            //{
+            //    resistedIntensity -= 1;
+            //}
         }
         if (ambient == new Color(0f, 0f, 1f, 0.1f))
         {
@@ -313,6 +318,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
+            //if (Evolution() == 2)
+            //{
+            //    resistedIntensity -= 1;
+            //}
         }
         if (ambient == new Color(0f, 1f, 0f, 0.1f))
         {
@@ -332,6 +341,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
+            //if (Evolution() == 3)
+            //{
+            //    resistedIntensity -= 1;
+            //}
         }
         if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
@@ -351,6 +364,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
+            //if (Evolution() == 4)
+            //{
+            //    resistedIntensity -= 1;
+            //}
         }
         if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
@@ -370,6 +387,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
+            //if (Evolution() == 5)
+            //{
+            //    resistedIntensity -= 1;
+            //}
         }
         if (resistedIntensity < 0)
         {
