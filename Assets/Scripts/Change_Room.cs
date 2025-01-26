@@ -15,10 +15,7 @@ public class Change_Room : MonoBehaviour
 
     private void Start()
     {
-        rooms = GameObject.Find("RoomGenerator");
         roomManager = GameObject.Find("RoomManager");
-
-        roomGenerationCount = rooms.GetComponent<RoomGeneration>();
         savedRooms = roomManager.GetComponent<SaveRooms>();
         playerController = gameObject.GetComponent<player>();
 
@@ -35,7 +32,7 @@ public class Change_Room : MonoBehaviour
             if (savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1] != savedRooms.roomCount)
             {
                 transform.position = new Vector3(savedRooms.roomCount * 200, 2, 0);
-                IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
+                savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount);
                 savedRooms.roomCount++;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
                 playerController.slowed = false;
@@ -45,28 +42,6 @@ public class Change_Room : MonoBehaviour
                 savedRooms.roomCount = 1;
                 SceneManager.LoadScene("EvolveScene");
             }
-        }
-    }
-    private void IntesityPerRoom(int level, int room)
-    {
-        switch (level)
-        {
-            case 1:
-                roomGenerationCount.SelectOldIntensity(savedRooms.ambientLvl1, savedRooms.intesitysLvl1[savedRooms.roomCount-1]);
-                break;
-            case 2:
-                roomGenerationCount.SelectOldIntensity(savedRooms.ambientLvl2, savedRooms.intesitysLvl2[savedRooms.roomCount - 1]);
-                break;
-            case 3:
-                roomGenerationCount.SelectOldIntensity(savedRooms.ambientLvl3, savedRooms.intesitysLvl3[savedRooms.roomCount - 1]);
-                
-                break;
-            case 4:
-                roomGenerationCount.SelectOldIntensity(savedRooms.ambientLvl4, savedRooms.intesitysLvl4[savedRooms.roomCount - 1]);
-                break;
-            case 5:
-                roomGenerationCount.SelectOldIntensity(savedRooms.ambientLvl5, savedRooms.intesitysLvl5[savedRooms.roomCount - 1]);
-                break;
         }
     }
 }

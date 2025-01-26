@@ -17,8 +17,6 @@ public class RoomGeneration : MonoBehaviour
 
     [Header("AmbientCube")]
     [SerializeField] Light Light;
-    private GameObject intesityImage;
-    private RawImage intesityCanvas;
 
     private GameObject roomManager;
     private SaveRooms roomSaved;
@@ -36,8 +34,6 @@ public class RoomGeneration : MonoBehaviour
 
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
-        intesityImage = GameObject.Find("Intensity");
-        intesityCanvas = intesityImage.GetComponent<RawImage>();
 
         CheckRoomsExistence();
 
@@ -101,38 +97,7 @@ public class RoomGeneration : MonoBehaviour
     {
         int intesityR = Random.Range(1, 3);
 
-        switch (intesityR)
-        {
-            case 1:
-               intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.0f);
-                break;
-
-            case 2:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
-                break;
-
-            case 3:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
-                break;
-        }
         return intesityR;
-    }
-    public void SelectOldIntensity(Color ambient, int intensity)
-    {
-        switch (intensity)
-        {
-            case 1:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.1f);
-                break;
-
-            case 2:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.35f);
-                break;
-
-            case 3:
-                intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
-                break;
-        }
     }
     private void CheckRoomsExistence()
     {
@@ -147,12 +112,10 @@ public class RoomGeneration : MonoBehaviour
                 {
                     roomSaved.ambientLvl1 = SelectAmbient();
                     GenerateNewRooms(roomSaved.lvl1, roomSaved.intesitysLvl1, roomSaved.ambientLvl1, roomSaved.nRoomsPerLevel[0]);
-                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl1[0]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl1);
-                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl1[0]);
                     GenerateExistentRooms(roomSaved.lvl1, roomSaved.nRoomsPerLevel[0]);
                 }
                 break;
@@ -161,12 +124,10 @@ public class RoomGeneration : MonoBehaviour
                 {
                     roomSaved.ambientLvl2 = SelectAmbient();
                     GenerateNewRooms(roomSaved.lvl2, roomSaved.intesitysLvl2, roomSaved.ambientLvl2, roomSaved.nRoomsPerLevel[1]);
-                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl2[0]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl2);
-                    SelectOldIntensity(roomSaved.ambientLvl2, roomSaved.intesitysLvl2[0]);
                     GenerateExistentRooms(roomSaved.lvl2, roomSaved.nRoomsPerLevel[1]);
                 }
                 break;
@@ -175,12 +136,10 @@ public class RoomGeneration : MonoBehaviour
                 {
                     roomSaved.ambientLvl3 = SelectAmbient();
                     GenerateNewRooms(roomSaved.lvl3, roomSaved.intesitysLvl3, roomSaved.ambientLvl3, roomSaved.nRoomsPerLevel[3]);
-                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl3[0]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl3);
-                    SelectOldIntensity(roomSaved.ambientLvl3, roomSaved.intesitysLvl3[0]);
                     GenerateExistentRooms(roomSaved.lvl3, roomSaved.nRoomsPerLevel[2]);
                 }
                 break;
@@ -189,12 +148,10 @@ public class RoomGeneration : MonoBehaviour
                 {
                     roomSaved.ambientLvl4 = SelectAmbient();
                     GenerateNewRooms(roomSaved.lvl4, roomSaved.intesitysLvl4, roomSaved.ambientLvl4, roomSaved.nRoomsPerLevel[3]);
-                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl4[0]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl4);
-                    SelectOldIntensity(roomSaved.ambientLvl4, roomSaved.intesitysLvl4[0]);
                     GenerateExistentRooms(roomSaved.lvl4, roomSaved.nRoomsPerLevel[3]);
                 }
                 break;
@@ -203,12 +160,10 @@ public class RoomGeneration : MonoBehaviour
                 {
                     roomSaved.ambientLvl5 = SelectAmbient();
                     GenerateNewRooms(roomSaved.lvl5, roomSaved.intesitysLvl5,roomSaved.ambientLvl5, roomSaved.nRoomsPerLevel[4]);
-                    SelectOldIntensity(roomSaved.ambientLvl1, roomSaved.intesitysLvl1[5]);
                 }
                 else
                 {
                     SelectOldAmbient(roomSaved.ambientLvl5);
-                    SelectOldIntensity(roomSaved.ambientLvl5, roomSaved.intesitysLvl5[0]);
                     GenerateExistentRooms(roomSaved.lvl5, roomSaved.nRoomsPerLevel[4]);
                 }
                 break;
@@ -295,4 +250,6 @@ public class RoomGeneration : MonoBehaviour
         }
         return roomDictionary;
     }
+
+
 }

@@ -63,4 +63,59 @@ public class SaveRooms : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    public Color AccesAmbient(int level)
+    {
+        Color ambientColor = Color.white;
+
+        switch (level)
+        {
+            case 1:
+                ambientColor = ambientLvl1;
+
+                break;
+
+            case 2:
+                ambientColor = ambientLvl2;
+                break;
+
+            case 3:
+                ambientColor = ambientLvl3;
+                break;
+
+            case 4:
+                ambientColor = ambientLvl4;
+                break;
+
+            case 5:
+                ambientColor = ambientLvl5;
+                break;
+
+        }
+        return ambientColor;
+    }
+
+    public int IntesityPerRoom(int level, int room)
+    {
+        int intesity = 1;
+        switch (level)
+        {
+            case 1:
+                intesity = intesitysLvl1[roomCount - 1];
+                break;
+            case 2:
+                intesity = intesitysLvl2[roomCount - 1];
+                break;
+            case 3:
+                intesity = intesitysLvl3[roomCount - 1];
+                break;
+            case 4:
+                intesity = intesitysLvl4[roomCount - 1];
+                break;
+            case 5:
+                intesity = intesitysLvl5[roomCount - 1];
+                break;
+        }
+        return intesity;
+    }
 }
