@@ -73,17 +73,9 @@ public class player : MonoBehaviour
     }
     private void movementAnimations()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
-            Animations.SetBool("walkLeft", true);  
-        }
-        else
-        {
-            Animations.SetBool("Walk", false);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Animations.SetBool("Walk", true);
+            Animations.SetBool("Walk", true);  
         }
         else
         {
@@ -114,7 +106,7 @@ public class player : MonoBehaviour
 
         if(Input.GetKey(KeyCode.A)&& mirandoDerecha)
         {
-            //Flip();            //Flip();
+            Flip();            //Flip();
         }
         if (Input.GetKey(KeyCode.D) &&!mirandoDerecha)
         {
