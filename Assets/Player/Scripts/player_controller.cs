@@ -20,6 +20,10 @@ public class player : MonoBehaviour
     [SerializeField] public Sprite IcePrefab;
     [SerializeField] public Sprite NightPrefab;
     [SerializeField] public Sprite IdlePrefab;
+
+
+    [SerializeField] private Animator Animations;
+    private Animation WalkAnim;
     private SpriteRenderer playerSprites;
     private Rigidbody rb;
     private Vector3 moveInput;
@@ -64,21 +68,58 @@ public class player : MonoBehaviour
     private void FixedUpdate()
     {
         Mover();
+        movementAnimations();
         AmbientEffect(LevelAmbient(roomSaved.levelCount));
+    }
+    private void movementAnimations()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            Animations.SetBool("walkLeft", true);  
+        }
+        else
+        {
+            Animations.SetBool("Walk", false);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            Animations.SetBool("Walk", true);
+        }
+        else
+        {
+            Animations.SetBool("Walk", false);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            Animations.SetBool("WalkFront", true);
+
+        }
+        else
+        {
+            Animations.SetBool("WalkFront", false);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            Animations.SetBool("WalkBack", true);
+
+        }
+        else
+        {
+            Animations.SetBool("WalkBack", false);
+        }
     }
     private void Mover()
     {
         rb.MovePosition(rb.position + moveInput * speed * Time.fixedDeltaTime);
 
-        if(Input.GetKey(KeyCode.A) && mirandoDerecha)
+        if(Input.GetKey(KeyCode.A)&& mirandoDerecha)
+        {
+            //Flip();            //Flip();
+        }
+        if (Input.GetKey(KeyCode.D) &&!mirandoDerecha)
         {
             Flip();
-        }
-        if(Input.GetKey(KeyCode.D) && !mirandoDerecha)
-        {
-            Flip();
-        }
-
+        }   
         if (Input.GetMouseButtonDown(0))
         {
             StartCoroutine(Atack(lightatack));
@@ -127,6 +168,7 @@ public class player : MonoBehaviour
         {
             case 1:
                 playerSprites.sprite = FirePrefab;
+                
                 break;
             case 2:
                 playerSprites.sprite = WaterPrefab;
