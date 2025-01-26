@@ -26,8 +26,8 @@ public class player : MonoBehaviour
     private float moveZ;
     private float moveX;
     private bool mirandoDerecha = true;
-    public float maxlife = 3;
-    public float actuallife;
+    public float maxlife = 1000;
+    public float actuallife = 1000;
     public bool isdeath = false;
     public bool resetlife = false;
     private Vector3 StartPosition;
@@ -59,11 +59,12 @@ public class player : MonoBehaviour
         moveInput = new Vector3(moveX, 0f, moveZ);
         lifeText.text = "X" + GameManager.instance.lifes.ToString();
         XpText.text = "X" + Xp.ToString();
-        AmbientEffect(LevelAmbient(roomSaved.levelCount));
+        
     }
     private void FixedUpdate()
     {
         Mover();
+        AmbientEffect(LevelAmbient(roomSaved.levelCount));
     }
     private void Mover()
     {
@@ -103,7 +104,7 @@ public class player : MonoBehaviour
             new WaitForSeconds(1f);
             transform.position = StartPosition;
             gameObject.SetActive(true);
-            actuallife = 3;
+            actuallife = maxlife;
             GameManager.instance.lifes -= 1;
         }
         else
@@ -122,7 +123,7 @@ public class player : MonoBehaviour
     }
     private void AsignSprite(int evolucion)
     {
-        switch(evolucion)
+        switch (evolucion)
         {
             case 1:
                 playerSprites.sprite = FirePrefab;
@@ -139,6 +140,9 @@ public class player : MonoBehaviour
             case 5:
                 playerSprites.sprite = NightPrefab;
                 break;
+            case 6:
+                playerSprites.sprite = IdlePrefab;
+                break;
 
 
         }
@@ -152,15 +156,21 @@ public class player : MonoBehaviour
             EvolutionManager.instance.nightEvolution};
         int maximo = 0;
         int prefab = 0;
+        bool empate = false;
         for(int i = 0; i < valores.Length; i++)
         {
             if (valores[i] > maximo)
             {
                 maximo = valores[i];
                 prefab = i;
+                empate = false;
+            }
+            else if (valores[i]== maximo )
+            {
+                empate = true;
             }
         }
-        return prefab + 1;
+        return empate ? 6 :prefab + 1;
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -337,7 +347,7 @@ public class player : MonoBehaviour
     {
         if (ambient == new Color(1f, 0f, 0f, 0.1f))
         {
-            actuallife = -1 * resistedIntensity;
+            StartCoroutine(DrainLife());
         }
         if (ambient == new Color(0f, 0f, 1f, 0.1f))
         {
@@ -349,7 +359,7 @@ public class player : MonoBehaviour
         }
         if (ambient == new Color(0f, 1f, 0f, 0.1f))
         {
-            actuallife = -1 * resistedIntensity;
+            StartCoroutine(DrainLife());
         }
         if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
@@ -363,7 +373,11 @@ public class player : MonoBehaviour
             }
         }
     }
-
+    private IEnumerator DrainLife()
+    {
+        actuallife -= (1 * resistedIntensity) * Time.deltaTime;
+        yield return new WaitForSeconds(1f);
+    }
     public Color LevelAmbient(int level)
     {
         Color ambient = Color.white;

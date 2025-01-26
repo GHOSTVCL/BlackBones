@@ -102,19 +102,19 @@ public class RoomGeneration : MonoBehaviour
     }
     public int SelectNewIntensity(Color ambient)
     {
-        int intesityR = Random.Range(0, 3);
+        int intesityR = Random.Range(1, 3);
 
         switch (intesityR)
         {
-            case 0:
+            case 1:
                intesityCanvas.color = new Color(ambient.r,ambient.g,ambient.b, 0.0f);
                 break;
 
-            case 1:
+            case 2:
                 intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.0f);
                 break;
 
-            case 2:
+            case 3:
                 intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
                 break;
         }
@@ -124,15 +124,15 @@ public class RoomGeneration : MonoBehaviour
     {
         switch (intensity)
         {
-            case 0:
+            case 1:
                 intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.1f);
                 break;
 
-            case 1:
+            case 2:
                 intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.35f);
                 break;
 
-            case 2:
+            case 3:
                 intesityCanvas.color = new Color(ambient.r, ambient.g, ambient.b, 0.75f);
                 break;
         }
