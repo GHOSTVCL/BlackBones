@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaf057af5f1df6a4e9cfa9282d7ec731, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6836996
+      value: 1.004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaf057af5f1df6a4e9cfa9282d7ec731, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaf057af5f1df6a4e9cfa9282d7ec731, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2064188
+      value: -1.4300001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aaf057af5f1df6a4e9cfa9282d7ec731, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: aaf057af5f1df6a4e9cfa9282d7ec731, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 90db71f31918e514f9f247cfc5a10ee1, type: 2}
     - target: {fileID: 919132149155446097, guid: aaf057af5f1df6a4e9cfa9282d7ec731, type: 3}
       propertyPath: m_Name
       value: IceRocks
