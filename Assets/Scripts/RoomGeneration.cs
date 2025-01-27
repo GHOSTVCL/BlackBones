@@ -116,17 +116,20 @@ public class RoomGeneration : MonoBehaviour
     {
         if (ambient == new Color(1f, 0f, 0f, 0.1f))
         {
-            Light.color = ambient;
+            //Light.color = ambient;
+            Light.color = new Color(0.7f, 0f, 0f, 0.1f);
             shader.GetComponent<Renderer>().material = mat1;
         }
         else if (ambient == new Color(0f,0f,1f, 0.1f))
         {
-           Light.color = ambient;
+            //Light.color = ambient;
+            Light.color = new Color(0f, 0f, 0.7f, 0.1f);
             shader.GetComponent<Renderer>().material = mat2;
         }
         else if(ambient == new Color(0f,1f,0f, 0.1f))
         {
-            Light.color = ambient;
+            //Light.color = ambient;
+            Light.color = new Color(0f, 0.7f, 0f, 0.1f);
             shader.GetComponent<Renderer>().material = mat3;
         }
         else if (ambient == new Color(0f, 0f, 0f, 0.1f))
@@ -136,7 +139,8 @@ public class RoomGeneration : MonoBehaviour
         }
         else if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
-            Light.color = ambient;
+            //Light.color = ambient;
+            Light.color = new Color(0f, 0.7f, 0.7f, 0.1f);
             shader.GetComponent<Renderer>().material = mat5;
         }
     }
