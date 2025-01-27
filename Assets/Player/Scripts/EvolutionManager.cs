@@ -6,11 +6,11 @@ using UnityEngine;
 public class EvolutionManager : MonoBehaviour
 {
     static public EvolutionManager instance { get; private set; }
-    public int FireEvolution = 0;
-    public int WaterEvolution = 0;
-    public int ToxicEvolution = 0;
-    public int IceEvolution = 0;
-    public int nightEvolution = 0;
+    public int FireEvolution;
+    public int WaterEvolution;
+    public int ToxicEvolution;
+    public int IceEvolution;
+    public int nightEvolution;
 
     private void Awake()
     {

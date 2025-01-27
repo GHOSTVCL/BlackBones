@@ -103,6 +103,7 @@ public class EvolutionSceneManager : MonoBehaviour
         if (GameManager.instance.Adn > 0)
         {
             EvolutionManager.instance.IceEvolution++;
+            GameManager.instance.Adn--;
         }
     }
     public void LevelDownCold()

@@ -56,7 +56,7 @@ public class EnemyPathFinding : MonoBehaviour
         if (collider.gameObject.CompareTag("lightatack"))
         {
             life -= 1;
-
+            behavior.GetKnockBack(player.transform, 4);
             Debug.Log(life);
             
         }

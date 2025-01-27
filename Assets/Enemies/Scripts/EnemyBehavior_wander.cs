@@ -80,4 +80,12 @@ public IEnumerator Atack()
         escala.x *= -1;
         transform.localScale = escala;
     }
+
+    public void GetKnockBack(Transform damageSource, float knockBackThurst)
+    {
+        Vector3 diference = (transform.position - damageSource.position).normalized * knockBackThurst*rb.mass;
+        rb.AddForce(diference, ForceMode.Impulse);
+    }
+
+
 }
