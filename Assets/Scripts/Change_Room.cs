@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -57,6 +58,11 @@ public class Change_Room : MonoBehaviour
             }
             else
             {
+                if (savedRooms.levelCount == 5 && savedRooms.roomCount == savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1])
+                {
+                    SceneManager.LoadScene("WinScene");
+                    return;
+                }
                 savedRooms.roomCount = 1;
                 SceneManager.LoadScene("EvolveScene");
             }

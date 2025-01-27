@@ -10,6 +10,10 @@ public class ChangeScreen : MonoBehaviour
 
     public void ChangeScene()
     {
+        if ((SceneManager.GetActiveScene().name == "TitleScreen") && gameObject.name == "Start")
+        {
+            SaveRooms.instance.ResetRooms();
+        }
         SceneManager.LoadScene(scene);
     }
 }

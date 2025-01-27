@@ -45,7 +45,7 @@ public class SaveRooms : MonoBehaviour
     public int roomCount;
     [HideInInspector]
     public int levelCount = 1;
-    
+
     public List<int> nRoomsPerLevel = new List<int>();
 
     private void Awake()
@@ -117,5 +117,26 @@ public class SaveRooms : MonoBehaviour
                 break;
         }
         return intesity;
+    }
+
+    public void ResetRooms()
+    {
+        lvl1 = new Dictionary<int, GameObject>();
+        lvl2 = new Dictionary<int, GameObject>();
+        lvl3 = new Dictionary<int, GameObject>();
+        lvl4 = new Dictionary<int, GameObject>();
+        lvl5 = new Dictionary<int, GameObject>();
+
+        ambientLvl1 = new Color();
+        ambientLvl2 = new Color();
+        ambientLvl3 = new Color();
+        ambientLvl4 = new Color();
+        ambientLvl5 = new Color();
+
+        intesitysLvl1 = new List<int>();
+        intesitysLvl2 = new List<int>();
+        intesitysLvl3 = new List<int>();
+        intesitysLvl4 = new List<int>();
+        intesitysLvl5 = new List<int>();
     }
 }

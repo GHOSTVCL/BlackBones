@@ -17,9 +17,9 @@ public class StartRun : MonoBehaviour
     {
         if(other.tag == "FirstDoor")
         {
-            savedRooms.levelCount = 1;
+            savedRooms.levelCount = 0;
             savedRooms.roomCount = 1;
-            SceneManager.LoadScene("LevelScene");
+            SceneManager.LoadScene("EvolveScene");
         }
     }
 }

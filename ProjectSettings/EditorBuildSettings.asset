@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BornScreen.unity
     guid: c628ca83e505b6c46bcfc64fba6237ca
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: 6ad8bf2b98905484697260b4d7a296b2
   m_configObjects: {}
