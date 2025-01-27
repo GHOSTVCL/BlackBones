@@ -36,6 +36,8 @@ public class player : MonoBehaviour
     public bool resetlife = false;
     private Vector3 StartPosition;
     public float Xp;
+    private float damageInterval = 1f;
+    private float damageTimer = 0f;
 
     [HideInInspector]
     public bool slowed;
@@ -235,6 +237,48 @@ public class player : MonoBehaviour
                 Die();
                 
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider trigger)
+    {
+        if (trigger.gameObject.CompareTag("damage"))
+        {
+            TriggerDamage();
+            damageTimer = 0f;
+        }
+    }
+
+    private void OnTriggerStay(Collider trigger)
+    {
+        if (trigger.gameObject.CompareTag("damage"))
+        {
+            damageTimer += Time.deltaTime;
+
+            if (damageTimer >= damageInterval)
+            {
+                TriggerDamage();
+                damageTimer = 0f;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider trigger)
+    {
+        if (trigger.gameObject.CompareTag("damage"))
+        {
+            damageTimer = 0f;
+        }
+    }
+
+    private void TriggerDamage()
+    {
+        actuallife -= 1;
+
+        if (actuallife <= 0 && !isdeath)
+        {
+            isdeath = true;
+            Die();
         }
     }
 
