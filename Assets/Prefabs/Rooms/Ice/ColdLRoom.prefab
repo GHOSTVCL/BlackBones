@@ -631,6 +631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -649,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -682,6 +686,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -705,6 +713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -723,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -756,6 +768,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -952,6 +968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -970,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1004,6 +1024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1026,6 +1050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1044,7 +1072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1078,6 +1106,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1100,6 +1132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1118,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1151,6 +1187,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1244,6 +1284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1262,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1296,6 +1340,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1318,6 +1366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1336,7 +1388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1369,6 +1421,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1516,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1534,7 +1594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1568,6 +1628,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1590,6 +1654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1608,7 +1676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1642,6 +1710,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1664,6 +1736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1682,7 +1758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1715,6 +1791,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1862,6 +1942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -1880,7 +1964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1913,6 +1997,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1998,6 +2086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceShards (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 8616465235232195839, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_TagString
+      value: damage
+      objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.18861887
@@ -2016,7 +2108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.055054426
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2049,6 +2141,10 @@ PrefabInstance:
     - target: {fileID: 8995946673011482181, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196535915617273281, guid: 81e477e1f7927f044ab11f76547093b8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
