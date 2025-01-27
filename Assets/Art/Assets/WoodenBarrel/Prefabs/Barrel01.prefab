@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.48
+      value: 16.978
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 0.3834405
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.765
+      value: 9.830574
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f9999af0ee5ca6499768eb37f22ac5a, type: 2}
     - target: {fileID: 919132149155446097, guid: fe93ce0b991fea5429aa99ea79633a4d, type: 3}
       propertyPath: m_Name
       value: Barrel01
