@@ -13,6 +13,9 @@ public class AmbientSimbol : MonoBehaviour
     [SerializeField] private Image Ice;
     [SerializeField] private Image Toxic;
     [SerializeField] private Image Night;
+    [SerializeField] private Image One;
+    [SerializeField] private Image Two;
+    [SerializeField] private Image Three;
     [SerializeField] private TextMeshProUGUI Intensitytext;
     public RoomGeneration Rm;
 
@@ -68,6 +71,23 @@ public class AmbientSimbol : MonoBehaviour
     }
     public void asignIntensity(int intensity)
     {
-        Intensitytext.text = intensity.ToString();
+        if(intensity == 1)
+        {
+            One.gameObject.SetActive(true);
+            Two.gameObject.SetActive(false);
+            Three.gameObject.SetActive(false);
+        }
+        else if (intensity == 2)
+        {
+            One.gameObject.SetActive(false);
+            Two.gameObject.SetActive(true);
+            Three.gameObject.SetActive(false);
+        }
+        else if (intensity == 3)
+        {
+            One.gameObject.SetActive(false);
+            Two.gameObject.SetActive(false);
+            Three.gameObject.SetActive(true);
+        }
     }
 }

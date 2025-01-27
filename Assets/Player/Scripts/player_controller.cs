@@ -184,6 +184,7 @@ public class player : MonoBehaviour
                 break;
             case 4:
                 playerSprites.sprite = IcePrefab;
+                Animations.SetBool("Ice", true);
                 break;
             case 5:
                 playerSprites.sprite = NightPrefab;
@@ -226,7 +227,7 @@ public class player : MonoBehaviour
         if(collision.gameObject.CompareTag("enemy"))
         {
             actuallife -= 1;
-
+            EnemyBehaviorwander.Instance.GetKnockBack(EnemyBehaviorwander.Instance.transform, 2);
             
             if (actuallife <= 0)
             {
@@ -470,5 +471,10 @@ public class player : MonoBehaviour
         }
 
         return ambient;
+    }
+    public void GetKnockBack(Transform damageSource, float knockBackThurst)
+    {
+        Vector3 diference = (transform.position - damageSource.position).normalized * knockBackThurst * rb.mass;
+        rb.AddForce(diference, ForceMode.Impulse);
     }
 }

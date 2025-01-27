@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class EnemyBehaviorwander : MonoBehaviour
 {
+    public static EnemyBehaviorwander Instance { get; private set; }
     private player objetive;
     [SerializeField] private float moveSpeed = 3f;
     
@@ -23,6 +24,7 @@ public class EnemyBehaviorwander : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         state = State.Patrolling;
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;

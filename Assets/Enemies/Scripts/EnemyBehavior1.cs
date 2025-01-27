@@ -74,7 +74,7 @@ public class EnemyBehavior1 : MonoBehaviour
         if (collider.gameObject.CompareTag("lightatack"))
         {
             life -= 1;
-
+            GetKnockBack(player.transform, 4);
             Debug.Log(life);
             
         }
@@ -92,4 +92,10 @@ public class EnemyBehavior1 : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void GetKnockBack(Transform damageSource, float knockBackThurst)
+    {
+        Vector3 diference = (transform.position - damageSource.position).normalized * knockBackThurst * rb.mass;
+        rb.AddForce(diference, ForceMode.Impulse);
+    }
+
 }
