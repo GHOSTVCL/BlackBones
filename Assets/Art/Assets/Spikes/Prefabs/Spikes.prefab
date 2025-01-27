@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.41
+      value: -7.784
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6333373
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.194671
+      value: -10.484
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60,9 +60,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de4321300e8ea0f4580b6019871f7f79, type: 2}
     - target: {fileID: 919132149155446097, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
       propertyPath: m_Name
       value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09863a3f404a3f54f93800db7a887ef2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
