@@ -41,6 +41,15 @@ public class RoomGeneration : MonoBehaviour
     [Header("AmbientCube")]
     [SerializeField] Light Light;
 
+    [Header("AmbientCube")]
+    [SerializeField] GameObject shader;
+    [SerializeField] Material mat1;
+    [SerializeField] Material mat2;
+    [SerializeField] Material mat3;
+    [SerializeField] Material mat4;
+    [SerializeField] Material mat5;
+    private Renderer shaderRenderer;
+
     private GameObject roomManager;
     private SaveRooms roomSaved;
 
@@ -58,8 +67,14 @@ public class RoomGeneration : MonoBehaviour
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
 
+        
+
         CheckRoomsExistence();
 
+    }
+    private void Update()
+    {
+        //shader.transform.position = new Vector3(7f, -6.5f, -73 + (15 * (roomSaved.roomCount - 1)));
     }
 
     private Color SelectAmbient()
@@ -71,23 +86,27 @@ public class RoomGeneration : MonoBehaviour
         {
             case 0:
                 Light.color = ambientColor = new Color(1f, 0f, 0f, 0.1f);
-
+                shader.GetComponent<Renderer>().material = mat1;
                 break;
 
             case 1:
                 Light.color = ambientColor = new Color(0f, 0f, 1f, 0.1f);
+                shader.GetComponent<Renderer>().material = mat2;
                 break;
 
             case 2:
                 Light.color = ambientColor = new Color(0f, 1f, 0f,0.1f);
+                shader.GetComponent<Renderer>().material = mat3;
                 break;
 
             case 3:
                 Light.color = ambientColor = new Color(0f, 0f, 0f, 0.1f);
+                shader.GetComponent<Renderer>().material = mat4;
                 break;
 
             case 4:
                 Light.color = ambientColor = new Color(0f, 1f, 1f, 0.1f);
+                shader.GetComponent<Renderer>().material = mat5;
                 break;
 
         }
@@ -196,7 +215,7 @@ public class RoomGeneration : MonoBehaviour
     {
         for (int i = 0; i < nRooms; i++)
         {
-            roomDictionary[i].transform.position = new Vector3(i * 200, 0, 0);
+            roomDictionary[i].transform.position = new Vector3(i * 50, 0, 0);
             Instantiate(roomDictionary[i]);
         }
     }
@@ -208,7 +227,7 @@ public class RoomGeneration : MonoBehaviour
         for (int i = 0; i < nRooms; i++)
         {
             int room = Random.Range(0, 4);
-            roomDictionary[room].transform.position = new Vector3(i * 200, 0, 0);
+            roomDictionary[room].transform.position = new Vector3(i * 50, 0, 0);
             Instantiate(roomDictionary[room]);
             lvl.Add(i,roomDictionary[room]);
             intensities.Add(SelectNewIntensity(ambient));

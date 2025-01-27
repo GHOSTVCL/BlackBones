@@ -49,7 +49,7 @@ public class Change_Room : MonoBehaviour
             }
             if (savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1] != savedRooms.roomCount)
             {
-                transform.position = new Vector3(savedRooms.roomCount * 200, 1, 0);
+                transform.position = new Vector3(savedRooms.roomCount * 50, 1, 0);
                 savedRooms.roomCount++;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
                 simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
