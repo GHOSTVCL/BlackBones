@@ -54,6 +54,7 @@ public class player : MonoBehaviour
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
         //EvolveResistance(LevelAmbient(roomSaved.levelCount), LevelIntensity());
+        gameObject.transform.position = new Vector3(0, 1, 0);
         AsignSprite(Evolution());
         slowed = false;
     }
@@ -148,6 +149,7 @@ public class player : MonoBehaviour
             gameObject.SetActive(true);
             actuallife = maxlife;
             GameManager.instance.lifes -= 1;
+            SceneManager.LoadScene("BornScreen");
         }
         else
         {

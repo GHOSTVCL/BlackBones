@@ -29,12 +29,12 @@ public class Change_Room : MonoBehaviour
             playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
             aaaaa = true;
         }
-        gameObject.transform.position = new Vector3(0, 2, 0);
+        gameObject.transform.position = new Vector3(0, 1, 0);
 
     }
     private void Update()
     {
-        if(aaaaa == false)
+        if(aaaaa == false && savedRooms.intesitysLvl1.Count != 0)
         {
             playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
             aaaaa = true;
@@ -50,7 +50,7 @@ public class Change_Room : MonoBehaviour
             }
             if (savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1] != savedRooms.roomCount)
             {
-                transform.position = new Vector3(savedRooms.roomCount * 200, 2, 0);
+                transform.position = new Vector3(savedRooms.roomCount * 200, 1, 0);
                 savedRooms.roomCount++;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
                 simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));

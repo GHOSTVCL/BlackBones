@@ -8,12 +8,35 @@ using UnityEngine.UI;
 
 public class RoomGeneration : MonoBehaviour
 {
-    [Header("ROOMS")]
-    [SerializeField] GameObject Room1;
-    [SerializeField] GameObject Room2;
-    [SerializeField] GameObject Room3;
-    [SerializeField] GameObject Room4;
-    [SerializeField] GameObject Room5;
+    [Header("FireRooms")]
+    [SerializeField] GameObject RoomF1;
+    [SerializeField] GameObject RoomF2;
+    [SerializeField] GameObject RoomF3;
+    [SerializeField] GameObject RoomF4;
+
+    [Header("WaterRooms")]
+    [SerializeField] GameObject RoomW1;
+    [SerializeField] GameObject RoomW2;
+    [SerializeField] GameObject RoomW3;
+    [SerializeField] GameObject RoomW4;
+
+    [Header("ToxicRooms")]
+    [SerializeField] GameObject RoomT1;
+    [SerializeField] GameObject RoomT2;
+    [SerializeField] GameObject RoomT3;
+    [SerializeField] GameObject RoomT4;
+
+    [Header("DarkRooms")]
+    [SerializeField] GameObject RoomD1;
+    [SerializeField] GameObject RoomD2;
+    [SerializeField] GameObject RoomD3;
+    [SerializeField] GameObject RoomD4;
+
+    [Header("IceRooms")]
+    [SerializeField] GameObject RoomI1;
+    [SerializeField] GameObject RoomI2;
+    [SerializeField] GameObject RoomI3;
+    [SerializeField] GameObject RoomI4;
 
     [Header("AmbientCube")]
     [SerializeField] Light Light;
@@ -95,7 +118,7 @@ public class RoomGeneration : MonoBehaviour
     }
     public int SelectNewIntensity(Color ambient)
     {
-        int intesityR = Random.Range(1, 3);
+        int intesityR = Random.Range(1, 4);
 
         return intesityR;
     }
@@ -194,35 +217,30 @@ public class RoomGeneration : MonoBehaviour
 
     private void AddRoomsToDictionary()
     {
-        FireDictionary.Add(0, Room1);
-        FireDictionary.Add(1, Room1);
-        FireDictionary.Add(2, Room1);
-        FireDictionary.Add(3, Room1);
-        FireDictionary.Add(4, Room1);
+        FireDictionary.Add(0, RoomF1);
+        FireDictionary.Add(1, RoomF2);
+        FireDictionary.Add(2, RoomF3);
+        FireDictionary.Add(3, RoomF4);
 
-        WaterDictionary.Add(0, Room2);
-        WaterDictionary.Add(1, Room2);
-        WaterDictionary.Add(2, Room2);
-        WaterDictionary.Add(3, Room2);
-        WaterDictionary.Add(4, Room2);
+        WaterDictionary.Add(0, RoomW1);
+        WaterDictionary.Add(1, RoomW2);
+        WaterDictionary.Add(2, RoomW3);
+        WaterDictionary.Add(3, RoomW4);
 
-        ToxicDictionary.Add(0, Room3);
-        ToxicDictionary.Add(1, Room3);
-        ToxicDictionary.Add(2, Room3);
-        ToxicDictionary.Add(3, Room3);
-        ToxicDictionary.Add(4, Room3);
+        ToxicDictionary.Add(0, RoomT1);
+        ToxicDictionary.Add(1, RoomT2);
+        ToxicDictionary.Add(2, RoomT3);
+        ToxicDictionary.Add(3, RoomT4);
 
-        DarkDictionary.Add(0, Room4);
-        DarkDictionary.Add(1, Room4);
-        DarkDictionary.Add(2, Room4);
-        DarkDictionary.Add(3, Room4);
-        DarkDictionary.Add(4, Room4);
+        DarkDictionary.Add(0, RoomD1);
+        DarkDictionary.Add(1, RoomD2);
+        DarkDictionary.Add(2, RoomD3);
+        DarkDictionary.Add(3, RoomD4);
 
-        IceDictionary.Add(0, Room5);
-        IceDictionary.Add(1, Room5);
-        IceDictionary.Add(2, Room5);
-        IceDictionary.Add(3, Room5);
-        IceDictionary.Add(4, Room5);
+        IceDictionary.Add(0, RoomI1);
+        IceDictionary.Add(1, RoomI2);
+        IceDictionary.Add(2, RoomI3);
+        IceDictionary.Add(3, RoomI4);
     }
 
     private Dictionary<int, GameObject> SelectDictionary(Color ambient)
