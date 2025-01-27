@@ -64,7 +64,10 @@ public class player : MonoBehaviour
         moveInput = new Vector3(moveX, 0f, moveZ);
         lifeText.text = "X" + GameManager.instance.lifes.ToString();
         XpText.text = "X" + Xp.ToString();
-        
+        if(actuallife < 0)
+        {
+            Die();
+        }
     }
     private void FixedUpdate()
     {
@@ -100,6 +103,10 @@ public class player : MonoBehaviour
         {
             Animations.SetBool("WalkBack", false);
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Animations.SetTrigger("atack");
+        }
     }
     private void Mover()
     {
@@ -113,7 +120,7 @@ public class player : MonoBehaviour
         {
             Flip();
         }   
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Space))
         {
             StartCoroutine(Atack(lightatack));
         }
@@ -124,10 +131,11 @@ public class player : MonoBehaviour
     }
     private IEnumerator Atack(Transform atack)
     {
+        Animations.SetBool("Atack", true);
         atack.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         atack.gameObject.SetActive(false);
-
+        Animations.SetBool("Atack", false);
 
     }
     public void Die()
