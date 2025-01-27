@@ -12,6 +12,7 @@ public class Change_Room : MonoBehaviour
 
     private player playerController;
 
+    private GameObject simbolObject;
     private AmbientSimbol simbol;
 
     private bool aaaaa = false;
@@ -22,7 +23,8 @@ public class Change_Room : MonoBehaviour
         roomManager = GameObject.Find("RoomManager");
         savedRooms = roomManager.GetComponent<SaveRooms>();
         playerController = gameObject.GetComponent<player>();
-        simbol = gameObject.AddComponent<AmbientSimbol>();
+        simbolObject = GameObject.Find("UI");
+        simbol = simbolObject.GetComponent<AmbientSimbol>();
         aaaaa = false;
         if (savedRooms.intesitysLvl1.Count != 0)
         {

@@ -16,15 +16,10 @@ public class AmbientSimbol : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Intensitytext;
     public RoomGeneration Rm;
 
-    private GameObject roomManager;
-    private SaveRooms savedRooms;
     void Start()
     {
-        roomManager = GameObject.Find("RoomManager");
-        savedRooms = roomManager.GetComponent<SaveRooms>();
-
-        AsignSimbol(savedRooms.AccesAmbient(savedRooms.levelCount));
-        asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
+        AsignSimbol(SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+        asignIntensity(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount));
     }
 
    private void AsignSimbol(Color Ambient)
