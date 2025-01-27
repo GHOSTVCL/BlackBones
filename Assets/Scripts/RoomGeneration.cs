@@ -72,10 +72,6 @@ public class RoomGeneration : MonoBehaviour
         CheckRoomsExistence();
 
     }
-    private void Update()
-    {
-        //shader.transform.position = new Vector3(7f, -6.5f, -73 + (15 * (roomSaved.roomCount - 1)));
-    }
 
     private Color SelectAmbient()
     {
@@ -85,17 +81,20 @@ public class RoomGeneration : MonoBehaviour
         switch (ambient)
         {
             case 0:
-                Light.color = ambientColor = new Color(1f, 0f, 0f, 0.1f);
+                ambientColor = new Color(1f, 0f, 0f, 0.1f);
+                Light.color = new Color(0.7f, 0f, 0f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat1;
                 break;
 
             case 1:
-                Light.color = ambientColor = new Color(0f, 0f, 1f, 0.1f);
+                ambientColor = new Color(0f, 0f, 1f, 0.1f);
+                Light.color = new Color(0f, 0f, 0.7f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat2;
                 break;
 
             case 2:
-                Light.color = ambientColor = new Color(0f, 1f, 0f,0.1f);
+                ambientColor = new Color(0f, 1f, 0f, 0.1f);
+                Light.color = new Color(0f, 0.7f, 0f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat3;
                 break;
 
@@ -105,7 +104,8 @@ public class RoomGeneration : MonoBehaviour
                 break;
 
             case 4:
-                Light.color = ambientColor = new Color(0f, 1f, 1f, 0.1f);
+                ambientColor = new Color(0f, 1f, 1f, 0.1f);
+                Light.color = new Color(0f, 0.7f, 0.7f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat5;
                 break;
 
@@ -117,22 +117,27 @@ public class RoomGeneration : MonoBehaviour
         if (ambient == new Color(1f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
+            shader.GetComponent<Renderer>().material = mat1;
         }
         else if (ambient == new Color(0f,0f,1f, 0.1f))
         {
            Light.color = ambient;
+            shader.GetComponent<Renderer>().material = mat2;
         }
         else if(ambient == new Color(0f,1f,0f, 0.1f))
         {
             Light.color = ambient;
+            shader.GetComponent<Renderer>().material = mat3;
         }
         else if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
+            shader.GetComponent<Renderer>().material = mat4;
         }
         else if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
             Light.color = ambient;
+            shader.GetComponent<Renderer>().material = mat5;
         }
     }
     public int SelectNewIntensity(Color ambient)
@@ -177,7 +182,7 @@ public class RoomGeneration : MonoBehaviour
                 if (roomSaved.lvl3.Count == 0)
                 {
                     roomSaved.ambientLvl3 = SelectAmbient();
-                    GenerateNewRooms(roomSaved.lvl3, roomSaved.intesitysLvl3, roomSaved.ambientLvl3, roomSaved.nRoomsPerLevel[3]);
+                    GenerateNewRooms(roomSaved.lvl3, roomSaved.intesitysLvl3, roomSaved.ambientLvl3, roomSaved.nRoomsPerLevel[2]);
                 }
                 else
                 {
