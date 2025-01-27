@@ -26,11 +26,7 @@ public class Change_Room : MonoBehaviour
         simbolObject = GameObject.Find("UI");
         simbol = simbolObject.GetComponent<AmbientSimbol>();
         aaaaa = false;
-        if (savedRooms.intesitysLvl1.Count != 0)
-        {
-            playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
-            aaaaa = true;
-        }
+        CheckIntensityCount(savedRooms.levelCount);
         gameObject.transform.position = new Vector3(0, 1, 0);
 
     }
@@ -56,6 +52,7 @@ public class Change_Room : MonoBehaviour
                 savedRooms.roomCount++;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
                 simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
+                playerController.speed = playerController.baseSpeed;
                 playerController.slowed = false;
             }
             else
@@ -63,6 +60,47 @@ public class Change_Room : MonoBehaviour
                 savedRooms.roomCount = 1;
                 SceneManager.LoadScene("EvolveScene");
             }
+        }
+    }
+
+    private void CheckIntensityCount(int level)
+    {
+        switch(level)
+        {
+            case 1:
+                if (savedRooms.intesitysLvl1.Count != 0)
+                {
+                    playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                    aaaaa = true;
+                } break;
+            case 2:
+                if (savedRooms.intesitysLvl2.Count != 0)
+                {
+                    playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                    aaaaa = true;
+                }
+                break;
+            case 3:
+                if (savedRooms.intesitysLvl3.Count != 0)
+                {
+                    playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                    aaaaa = true;
+                }
+                break;
+            case 4:
+                if (savedRooms.intesitysLvl4.Count != 0)
+                {
+                    playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                    aaaaa = true;
+                }
+                break;
+            case 5:
+                if (savedRooms.intesitysLvl5.Count != 0)
+                {
+                    playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+                    aaaaa = true;
+                }
+                break;
         }
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
+    [SerializeField] public float speed = 3f;
     [SerializeField] private Transform lightatack;
     [SerializeField] private Transform heavyatack;
     [SerializeField] private TextMeshProUGUI lifeText;
@@ -39,6 +39,8 @@ public class player : MonoBehaviour
 
     [HideInInspector]
     public bool slowed;
+    [HideInInspector]
+    public float baseSpeed;
 
     private int resistedIntensity;
 
@@ -56,6 +58,7 @@ public class player : MonoBehaviour
         //EvolveResistance(LevelAmbient(roomSaved.levelCount), LevelIntensity());
         gameObject.transform.position = new Vector3(0, 1, 0);
         AsignSprite(Evolution());
+        baseSpeed = speed;
         slowed = false;
     }
     private void Update()
@@ -305,10 +308,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
-            //if (Evolution() == 1)
-            //{
-            //    resistedIntensity -= 1;
-            //}
+            if (Evolution() == 1)
+            {
+                resistedIntensity -= 1;
+            }
         }
         if (ambient == new Color(0f, 0f, 1f, 0.1f))
         {
@@ -328,10 +331,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
-            //if (Evolution() == 2)
-            //{
-            //    resistedIntensity -= 1;
-            //}
+            if (Evolution() == 2)
+            {
+                resistedIntensity -= 1;
+            }
         }
         if (ambient == new Color(0f, 1f, 0f, 0.1f))
         {
@@ -351,10 +354,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
-            //if (Evolution() == 3)
-            //{
-            //    resistedIntensity -= 1;
-            //}
+            if (Evolution() == 3)
+            {
+                resistedIntensity -= 1;
+            }
         }
         if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
@@ -374,10 +377,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
-            //if (Evolution() == 4)
-            //{
-            //    resistedIntensity -= 1;
-            //}
+            if (Evolution() == 4)
+            {
+                resistedIntensity -= 1;
+            }
         }
         if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
@@ -397,10 +400,10 @@ public class player : MonoBehaviour
             {
                 resistedIntensity = intensity;
             }
-            //if (Evolution() == 5)
-            //{
-            //    resistedIntensity -= 1;
-            //}
+            if (Evolution() == 5)
+            {
+                resistedIntensity -= 1;
+            }
         }
         if (resistedIntensity < 0)
         {
