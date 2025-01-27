@@ -7,15 +7,19 @@ public class DisabledContinue : MonoBehaviour
 {
     Button buttonContinue;
 
+    private void Start()
+    {
+        buttonContinue = GetComponent<Button>();
+    }
     private void Update()
     {
         if(SaveRooms.instance.intesitysLvl1.Count == 0)
         {
-            gameObject.SetActive(false);
+            buttonContinue.interactable = false;
         }
         else
         {
-            gameObject.SetActive(true);
+            buttonContinue.interactable = true;
         }
     }
 }
