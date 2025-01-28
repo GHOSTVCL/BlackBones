@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb1161fc1844ded42ad2dd8e61f6749e
+guid: 7136f5a0086819349a5ba70e12de6849
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 30
+  spritePixelsToUnits: 35
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,253 +97,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_2716_0
+      name: Toxic_SpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2019
+        y: 2012
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.5577853, y: 0.3933}
+      pivot: {x: 0.554896, y: 0.4508329}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 548394a85215b7a418240b2af331967d
-      internalID: -1347675666
+      spriteID: 7723833b94fc9d4419719b98feca7fb5
+      internalID: 550494880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_1
+      name: Toxic_SpriteSheet_1
       rect:
         serializedVersion: 2
         x: 1220
-        y: 2019
+        y: 2012
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.56067455, y: 0.36662504}
+      pivot: {x: 0.5577853, y: 0.42814013}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a82df4d0cc632d34f8ca396f3ed416de
-      internalID: 1987826374
+      spriteID: f90f99b2bcb45a545a21dd631b9886bf
+      internalID: -430836728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_2
+      name: Toxic_SpriteSheet_2
       rect:
         serializedVersion: 2
         x: 2440
-        y: 2019
+        y: 2012
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.5577853, y: 0.37424648}
+      pivot: {x: 0.56067455, y: 0.44326875}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83ba654953cba514184c8954d897336d
-      internalID: -1169578523
+      spriteID: 3f775321f5e943044bc0e7e75c765781
+      internalID: 254201449
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_3
+      name: Toxic_SpriteSheet_3
       rect:
         serializedVersion: 2
         x: 3660
-        y: 2019
+        y: 2012
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.44510397, y: 0.35900363}
+      pivot: {x: 0.44510397, y: 0.42814013}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf7691d332b775344ae2ed57673a64f9
-      internalID: -2116204194
+      spriteID: 9b2c51fa224ec11489950e88284e046d
+      internalID: -485438171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_4
+      name: Toxic_SpriteSheet_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 1094
+        y: 1080
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.5065804, y: 0.39921346}
+      pivot: {x: 0.55689895, y: 0.42344946}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59a4e6945ec10b44792dabafbc44935a
-      internalID: 1153292572
+      spriteID: 83844218b82f4014e8ff0f7fab745c2f
+      internalID: -664594209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_5
+      name: Toxic_SpriteSheet_5
       rect:
         serializedVersion: 2
         x: 1220
-        y: 1094
+        y: 1080
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.50577843, y: 0.3958232}
+      pivot: {x: 0.53793246, y: 0.43586305}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5e2568feb926d34ea503cf32034c403
-      internalID: 511374440
+      spriteID: e409dcc675ef1f044af462167f44b14b
+      internalID: 1393090818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_6
+      name: Toxic_SpriteSheet_6
       rect:
         serializedVersion: 2
         x: 2440
-        y: 1094
+        y: 1080
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.4999998, y: 0.38925967}
+      pivot: {x: 0.5237076, y: 0.4110359}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae18cce7bbedbe147acaf05dea0c57bb
-      internalID: 1859310228
+      spriteID: 9f5fcda09681eca428f8bd95b011b968
+      internalID: 1581519309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_7
+      name: Toxic_SpriteSheet_7
       rect:
         serializedVersion: 2
         x: 3660
-        y: 1078
+        y: 1080
         width: 1220
-        height: 941
+        height: 932
       alignment: 9
-      pivot: {x: 0.4999996, y: 0.41672885}
+      pivot: {x: 0.503161, y: 0.42344946}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53318e6c3b6014b44889b99e03482114
-      internalID: 858453686
+      spriteID: 73cae5d05b69909488744e68af89d076
+      internalID: 1012853100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_8
+      name: Toxic_SpriteSheet_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 169
+        y: 148
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.49999994, y: 0.4390286}
+      pivot: {x: 0.5808994, y: 0.46974325}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2a15736c88aa4448ac488ce38b401d3
-      internalID: -15087387
+      spriteID: 5cf83c05edd0e5b48bd58c435d89e636
+      internalID: -451471942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_9
+      name: Toxic_SpriteSheet_9
       rect:
         serializedVersion: 2
         x: 1220
-        y: 169
+        y: 148
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.50577843, y: 0.4352179}
+      pivot: {x: 0.5895672, y: 0.46974325}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee2ec7d718b66c34f8af1064b2fe1950
-      internalID: -1989369473
+      spriteID: 0dcb63b0650d1304a9358ceaf2a45476
+      internalID: -939225685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_10
+      name: Toxic_SpriteSheet_10
       rect:
         serializedVersion: 2
         x: 2440
-        y: 169
+        y: 148
         width: 1220
-        height: 925
+        height: 932
       alignment: 9
-      pivot: {x: 0.4999998, y: 0.4390286}
+      pivot: {x: 0.5866779, y: 0.46974325}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4de8dd8f843bb9249a5122609284aa1f
-      internalID: 367381400
+      spriteID: 2be7f099a9a474e4f87fbf835a08471c
+      internalID: -373673610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2716_11
+      name: Toxic_SpriteSheet_11
       rect:
         serializedVersion: 2
         x: 3660
-        y: 169
+        y: 148
         width: 1220
-        height: 905
+        height: 932
       alignment: 9
-      pivot: {x: 0.4999996, y: 0.44922343}
+      pivot: {x: 0.54622823, y: 0.44705075}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 614e76cd471a2bd4faf9fdd4859bb477
-      internalID: -1913686863
+      spriteID: 129147a64de0f4f4da97c924258867ef
+      internalID: -1117847622
       vertices: []
       indices: 
       edges: []
@@ -359,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_2716_0: -1347675666
-      IMG_2716_1: 1987826374
-      IMG_2716_10: 367381400
-      IMG_2716_11: -1913686863
-      IMG_2716_2: -1169578523
-      IMG_2716_3: -2116204194
-      IMG_2716_4: 1153292572
-      IMG_2716_5: 511374440
-      IMG_2716_6: 1859310228
-      IMG_2716_7: 858453686
-      IMG_2716_8: -15087387
-      IMG_2716_9: -1989369473
+      Toxic_SpriteSheet_0: 550494880
+      Toxic_SpriteSheet_1: -430836728
+      Toxic_SpriteSheet_10: -373673610
+      Toxic_SpriteSheet_11: -1117847622
+      Toxic_SpriteSheet_2: 254201449
+      Toxic_SpriteSheet_3: -485438171
+      Toxic_SpriteSheet_4: -664594209
+      Toxic_SpriteSheet_5: 1393090818
+      Toxic_SpriteSheet_6: 1581519309
+      Toxic_SpriteSheet_7: 1012853100
+      Toxic_SpriteSheet_8: -451471942
+      Toxic_SpriteSheet_9: -939225685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

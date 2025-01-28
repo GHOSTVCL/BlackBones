@@ -178,30 +178,48 @@ public class player : MonoBehaviour
                 Animations.SetBool("Fire", true);
                 Animations.SetBool("Ice", false);
                 Animations.SetBool("Night", false);
+                Animations.SetBool("Water", false);
+                Animations.SetBool("toxic", false);
                 break;
             case 2:
                 playerSprites.sprite = WaterPrefab;
+                Animations.SetBool("Water", true);
+                Animations.SetBool("Fire", false);
+                Animations.SetBool("Ice", false);
+                Animations.SetBool("Night", false);
+                Animations.SetBool("toxic", false);
                 break;
             case 3:
                 playerSprites.sprite = ToxicPrefab;
+                Animations.SetBool("toxic", true);
+                Animations.SetBool("Fire", false);
+                Animations.SetBool("Ice", false);
+                Animations.SetBool("Night", false);
+                Animations.SetBool("Water", false);  
                 break;
             case 4:
                 playerSprites.sprite = IcePrefab;
                 Animations.SetBool("Ice", true);
                 Animations.SetBool("Fire", false);
                 Animations.SetBool("Night", false);
+                Animations.SetBool("Water", false);
+                Animations.SetBool("toxic", false);
                 break;
             case 5:
                 playerSprites.sprite = NightPrefab;
                 Animations.SetBool("Night", true);
                 Animations.SetBool("Ice", false);
                 Animations.SetBool("Fire", false);
+                Animations.SetBool("Water", false);
+                Animations.SetBool("toxic", false);
                 break;
             case 6:
                 playerSprites.sprite = IdlePrefab;
                 Animations.SetBool("Fire", false);
                 Animations.SetBool("Ice", false);
                 Animations.SetBool("Night", false);
+                Animations.SetBool("Water", false);
+                Animations.SetBool("toxic", false);
                 break;
 
 

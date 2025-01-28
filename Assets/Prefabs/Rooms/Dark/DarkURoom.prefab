@@ -752,6 +752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -888,6 +892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1357,6 +1365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1493,6 +1505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2473,6 +2489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3017,6 +3037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3087,6 +3111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3425,6 +3453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3978299889216304023, guid: ae13c9b748cc10a4bad8980086491dc1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 593bd24233da54943af0a4a8892a23bb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

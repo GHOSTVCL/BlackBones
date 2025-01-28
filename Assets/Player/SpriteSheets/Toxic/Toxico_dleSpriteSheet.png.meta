@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0d41eb28bf827344da8e3eac5c52c289
+guid: 1afb1b216c26c6e4ea95151c06fff6c8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,64 +97,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_2715_0
+      name: Toxico_dleSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 912
-        width: 1316
-        height: 1223
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 884
+        width: 1627
+        height: 1247
+      alignment: 9
+      pivot: {x: 0.40250728, y: 0.48869318}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49185b3b633c9504a87a490112b31803
-      internalID: -918470751
+      spriteID: 97b1d6ccb9e088842a4b83783ce106ad
+      internalID: 734577271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2715_1
+      name: Toxico_dleSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1725
-        y: 912
-        width: 1396
-        height: 1223
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1627
+        y: 884
+        width: 1627
+        height: 1251
+      alignment: 9
+      pivot: {x: 0.48916748, y: 0.49718222}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd9c910848d426c418f1215ee5530b58
-      internalID: -1601881941
+      spriteID: 2e426d7f0709551489b5cbf3d614bf07
+      internalID: -1416998081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2715_2
+      name: Toxico_dleSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 3371
-        y: 912
-        width: 1473
-        height: 1226
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3254
+        y: 884
+        width: 1627
+        height: 1282
+      alignment: 9
+      pivot: {x: 0.52383155, y: 0.50274944}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c995bd9ba3145e4d8a1e7fd0f07e2ee
-      internalID: -2122347438
+      spriteID: 87252bfd476fdd445bb179f31280f90f
+      internalID: -1921175148
       vertices: []
       indices: 
       edges: []
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_2715_0: -918470751
-      IMG_2715_1: -1601881941
-      IMG_2715_2: -2122347438
+      Toxico_dleSpriteSheet_0: 734577271
+      Toxico_dleSpriteSheet_1: -1416998081
+      Toxico_dleSpriteSheet_2: -1921175148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
