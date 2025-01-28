@@ -75,7 +75,7 @@ public class EvolutionSceneManager : MonoBehaviour
                 prefab = i;
                 empate = false;
             }
-            else if (valores[i] == maximo && maximo > 0)
+            else if (valores[i] == maximo)
             {
                 empate = true;
             }

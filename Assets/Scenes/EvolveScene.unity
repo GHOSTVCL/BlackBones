@@ -2560,7 +2560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285, y: -4}
+  m_AnchoredPosition: {x: -302, y: -4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1257409392
@@ -2591,7 +2591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 32bae606a8e00ba4a86efa04b050c667, type: 3}
+  m_Sprite: {fileID: -1333015287, guid: 1569b8a16ed21274c86504368ef984ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3785,12 +3785,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6394ae49ad2424d94a7344d8e89815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirePrefab: {fileID: 21300000, guid: 5750761ddaa99044292829fbf45ed2e9, type: 3}
-  WaterPrefab: {fileID: 21300000, guid: 83fa9278eab20d84abc2e1c4b4122e35, type: 3}
+  FirePrefab: {fileID: -1028772053, guid: 7938bb15486ba5341aa89b71d003c05e, type: 3}
+  WaterPrefab: {fileID: 21300000, guid: 172b0ca5a54f4734a8e3f2943f678f52, type: 3}
   ToxicPrefab: {fileID: 21300000, guid: 22018f6879760fb45b807beb490b3015, type: 3}
-  IcePrefab: {fileID: 21300000, guid: 3299176299715ce4399cac1528ead209, type: 3}
-  NightPrefab: {fileID: 21300000, guid: a4bcd72214be63349abe89500112145a, type: 3}
-  IdlePrefab: {fileID: 21300000, guid: 32bae606a8e00ba4a86efa04b050c667, type: 3}
+  IcePrefab: {fileID: 21300000, guid: 751de32e36a417f43a49d6641949b8e3, type: 3}
+  NightPrefab: {fileID: 21300000, guid: 5429cbe8b29064146be1cb9dfcfe7a86, type: 3}
+  IdlePrefab: {fileID: -1333015287, guid: 1569b8a16ed21274c86504368ef984ad, type: 3}
   playerpng: {fileID: 1257409393}
   FireText: {fileID: 1896710630}
   WaterText: {fileID: 1612974982}
