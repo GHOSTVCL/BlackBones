@@ -18,7 +18,7 @@ public class player : MonoBehaviour
     [SerializeField] public Sprite NightPrefab;
     [SerializeField] public Sprite IdlePrefab;
 
-    [SerializeField] Light playerLight;
+    [SerializeField] public Light playerLight;
 
 
     [SerializeField] private Animator Animations;

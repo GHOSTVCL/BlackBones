@@ -40,7 +40,6 @@ public class RoomGeneration : MonoBehaviour
 
     [Header("AmbientCube")]
     [SerializeField] Light Light;
-    [SerializeField] Light Light2;
 
     [Header("AmbientCube")]
     [SerializeField] GameObject shader;

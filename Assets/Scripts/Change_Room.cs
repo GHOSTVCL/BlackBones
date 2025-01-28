@@ -36,6 +36,7 @@ public class Change_Room : MonoBehaviour
         if(aaaaa == false && savedRooms.intesitysLvl1.Count != 0)
         {
             playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+            simbol.AsignSimbol(SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
             aaaaa = true;
         }
     }
@@ -51,6 +52,7 @@ public class Change_Room : MonoBehaviour
             {
                 transform.position = new Vector3(savedRooms.roomCount * 50, 1, 0);
                 savedRooms.roomCount++;
+                playerController.playerLight.range = 8;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
                 simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
                 simbol.overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));

@@ -11,7 +11,6 @@ public class AmbientSimbol : MonoBehaviour
     [SerializeField] private Image One;
     [SerializeField] private Image Two;
     [SerializeField] private Image Three;
-    [SerializeField] private TextMeshProUGUI Intensitytext;
     [SerializeField] private RawImage overlay;
     public RoomGeneration Rm;
 
@@ -22,7 +21,7 @@ public class AmbientSimbol : MonoBehaviour
         overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
     }
 
-   private void AsignSimbol(Color Ambient)
+   public void AsignSimbol(Color Ambient)
     {
         Color actualcolor = Ambient;
        if(actualcolor == new Color(1f, 0f, 0f, 0.1f))
