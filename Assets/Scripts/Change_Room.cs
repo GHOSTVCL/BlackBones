@@ -50,14 +50,8 @@ public class Change_Room : MonoBehaviour
             }
             if (savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1] != savedRooms.roomCount)
             {
-                transform.position = new Vector3(savedRooms.roomCount * 50, 1, 0);
                 savedRooms.roomCount++;
-                playerController.playerLight.range = 8;
-                playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
-                simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
-                simbol.overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
-                playerController.speed = playerController.baseSpeed;
-                playerController.slowed = false;
+                Invoke("ChangeRoom",1);
             }
             else
             {
@@ -73,7 +67,7 @@ public class Change_Room : MonoBehaviour
                 EvolutionManager.instance.savedIce = EvolutionManager.instance.IceEvolution;
                 GameManager.instance.Adn += 1;
                 savedRooms.roomCount = 1;
-                SceneManager.LoadScene("EvolveScene");
+                Invoke("ToEvolveScreen",1);
             }
         }
     }
@@ -117,5 +111,21 @@ public class Change_Room : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    private void ChangeRoom()
+    {
+        transform.position = new Vector3((savedRooms.roomCount-1) * 50, 1, 0);
+        playerController.playerLight.range = 8;
+        playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
+        simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
+        simbol.overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+        playerController.speed = playerController.baseSpeed;
+        playerController.slowed = false;
+    }
+
+    private void ToEvolveScreen()
+    {
+        SceneManager.LoadScene("EvolveScene");
     }
 }
