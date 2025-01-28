@@ -12,6 +12,17 @@ public class EvolutionManager : MonoBehaviour
     public int IceEvolution;
     public int nightEvolution;
 
+    [HideInInspector]
+    public int savedFire = 0;
+    [HideInInspector]
+    public int savedWater = 0;
+    [HideInInspector]
+    public int savedToxic = 0;
+    [HideInInspector]
+    public int savedIce = 0;
+    [HideInInspector]
+    public int savedNight = 0;
+
     private void Awake()
     {
 
