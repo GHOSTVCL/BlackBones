@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c5bd1c9547c61f342b21cc46e470a8b2
+guid: cf98a29b661160346a3845167f277efb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 53
+  spritePixelsToUnits: 52
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,64 +97,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_2727_0
+      name: PlayerIdleSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 874
-        width: 1298
-        height: 1346
+        y: 908
+        width: 1627
+        height: 1241
       alignment: 9
-      pivot: {x: 0.5050705, y: 0.48428693}
+      pivot: {x: 0.40467378, y: 0.47443655}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 011cc9ce7d0f2384eb967c7b1cd6ff3e
-      internalID: -1685386400
+      spriteID: 9d3c840577618714fb3f854276b85be1
+      internalID: -1322685034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2727_1
+      name: PlayerIdleSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1626
-        y: 874
-        width: 1626
-        height: 1346
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1627
+        y: 908
+        width: 1627
+        height: 1237
+      alignment: 9
+      pivot: {x: 0.491334, y: 0.480053}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d13baa296b39c419f11da25dc15b0a
-      internalID: -907892417
+      spriteID: bd5bd9b5beb2b6b429ce4891943e808c
+      internalID: 1112935351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IMG_2727_2
+      name: PlayerIdleSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 3252
-        y: 874
-        width: 1626
-        height: 1346
+        x: 3254
+        y: 908
+        width: 1627
+        height: 1241
       alignment: 9
-      pivot: {x: 0.53034973, y: 0.4999999}
+      pivot: {x: 0.52816457, y: 0.4886384}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5505efb4bc9849c4f927787d98c20944
-      internalID: 2091551072
+      spriteID: ee08c8a83c38fda4cbca3e2a58e75730
+      internalID: 1243789580
       vertices: []
       indices: 
       edges: []
@@ -162,7 +162,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a476e4c6d6c4bd24aa38efe94d68046e
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -170,9 +170,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      IMG_2727_0: -1685386400
-      IMG_2727_1: -907892417
-      IMG_2727_2: 2091551072
+      PlayerIdleSpriteSheet_0: -1322685034
+      PlayerIdleSpriteSheet_1: 1112935351
+      PlayerIdleSpriteSheet_2: 1243789580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
