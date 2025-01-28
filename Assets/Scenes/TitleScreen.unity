@@ -1394,6 +1394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   Adn: 0
+  EnemyCount: 0
   lifes: 3
   currentLevel: 0
   time: 0
@@ -1762,23 +1763,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995016667186639762, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
       propertyPath: nRoomsPerLevel.Array.data[0]
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8995016667186639762, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
       propertyPath: nRoomsPerLevel.Array.data[1]
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8995016667186639762, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
       propertyPath: nRoomsPerLevel.Array.data[2]
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8995016667186639762, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
       propertyPath: nRoomsPerLevel.Array.data[3]
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8995016667186639762, guid: 9cb680b4aa4491c43b0bf60c3033958c, type: 3}
       propertyPath: nRoomsPerLevel.Array.data[4]
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

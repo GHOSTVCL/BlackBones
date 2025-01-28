@@ -93,13 +93,13 @@ public class AmbientSimbol : MonoBehaviour
         {
             switch(intensity)
             {
-                case 1: overlay.color = new Color(color.r, color.g, color.b, 0.1f);
+                case 1: overlay.color = new Color(0.8f, 0.2f, 0.2f, 0.1f);
                     break;
                 case 2:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.35f);
+                    overlay.color = new Color(0.8f, 0.2f, 0.2f, 0.35f);
                     break;
                 case 3:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.75f);
+                    overlay.color = new Color(0.8f, 0.2f, 0.2f, 0.75f);
                     break;
             }
         }
@@ -108,13 +108,13 @@ public class AmbientSimbol : MonoBehaviour
             switch (intensity)
             {
                 case 1:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.1f);
+                    overlay.color = new Color(0.2f,0.2f,0.8f, 0.1f);
                     break;
                 case 2:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.35f);
+                    overlay.color = new Color(0.2f, 0.2f, 0.8f, 0.35f);
                     break;
                 case 3:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.75f);
+                    overlay.color = new Color(0.2f, 0.2f, 0.8f, 0.75f);
                     break;
             }
         }
@@ -123,34 +123,35 @@ public class AmbientSimbol : MonoBehaviour
             switch (intensity)
             {
                 case 1:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.1f);
+                    overlay.color = new Color(0.2f,0.8f,0.2f, 0.1f);
                     break;
                 case 2:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.35f);
+                    overlay.color = new Color(0.2f, 0.8f, 0.2f, 0.35f);
                     break;
                 case 3:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.75f);
+                    overlay.color = new Color(0.2f, 0.8f, 0.2f, 0.75f);
                     break;
             }
         }
         else if (color == new Color(0f, 1f, 1f, 0.1f))
         {
-            overlay.gameObject.SetActive(false);
-        }
-        else if (color == new Color(0f, 0f, 0f, 0.1f))
-        {
             switch (intensity)
             {
                 case 1:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.1f);
+                    overlay.color = new Color(0.2f, 0.8f, 0.8f, 0.1f);
                     break;
                 case 2:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.35f);
+                    overlay.color = new Color(0.2f, 0.8f, 0.8f, 0.35f);
                     break;
                 case 3:
-                    overlay.color = new Color(color.r, color.g, color.b, 0.75f);
+                    overlay.color = new Color(0.2f, 0.8f, 0.8f, 0.75f);
                     break;
             }
+        }
+        else if (color == new Color(0f, 0f, 0f, 0.1f))
+        {
+            overlay.gameObject.SetActive(false);
+            
         }
     }
 }

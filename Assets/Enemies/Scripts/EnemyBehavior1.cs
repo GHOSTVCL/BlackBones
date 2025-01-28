@@ -92,7 +92,7 @@ public class EnemyBehavior1 : MonoBehaviour
         if (collider.gameObject.CompareTag("lightatack"))
         {
             life -= 1;
-            GetKnockBack(player.transform, 4);
+            GetKnockBack(player.transform, 2);
             Debug.Log(life);
             
         }
