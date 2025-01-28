@@ -13,12 +13,12 @@ public class EnemyBehavior1 : MonoBehaviour
     private Transform player;
     private Rigidbody rb;
     private bool right = true;
-    
+    private Animator animations;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
+        animations = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -34,7 +34,7 @@ public class EnemyBehavior1 : MonoBehaviour
         {
             Vector3 moveEnemy = (player.position - transform.position).normalized;
             moveEnemy.y = 0;
-
+            DoAnimations(moveEnemy);
             rb.MovePosition(rb.position + moveEnemy * moveSpeed * Time.deltaTime);
             
             if(moveEnemy.x > 0 && !right)
@@ -46,6 +46,10 @@ public class EnemyBehavior1 : MonoBehaviour
                 Flip();
             }
         }
+        else
+        {
+            animations.SetBool("walk", false);
+        }
         if(distanceToPlayer <= 1)
         {
             StartCoroutine(Atack());
@@ -55,11 +59,25 @@ public class EnemyBehavior1 : MonoBehaviour
     }
     private IEnumerator Atack()
     {
+        animations.SetBool("walk", false);
+        animations.SetBool("atack", true);
         atack.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         atack.gameObject.SetActive(false);
+        animations.SetBool("atack", false);
         yield return new WaitForSeconds(1f);
         StopCoroutine(Atack());
+    }
+    public void DoAnimations(Vector3 movement)
+    {
+        if (movement.x > 0 || movement.x < 0)
+        {
+            animations.SetBool("walk", true);
+        }
+        else
+        {
+            animations.SetBool("walk", false);
+        }
     }
     private void Flip()
     {

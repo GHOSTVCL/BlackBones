@@ -44,6 +44,7 @@ public class EnemyPathFinding : MonoBehaviour
             StartCoroutine(behavior.Atack());
         }
         
+       
         
     }
 
