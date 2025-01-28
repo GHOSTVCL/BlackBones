@@ -64,6 +64,12 @@ public class Change_Room : MonoBehaviour
                     SceneManager.LoadScene("WinScene");
                     return;
                 }
+                EvolutionManager.instance.savedFire = EvolutionManager.instance.FireEvolution;
+                EvolutionManager.instance.savedWater = EvolutionManager.instance.WaterEvolution;
+                EvolutionManager.instance.savedToxic = EvolutionManager.instance.ToxicEvolution;
+                EvolutionManager.instance.savedNight = EvolutionManager.instance.nightEvolution;
+                EvolutionManager.instance.savedIce = EvolutionManager.instance.IceEvolution;
+                GameManager.instance.Adn += 1;
                 savedRooms.roomCount = 1;
                 SceneManager.LoadScene("EvolveScene");
             }
