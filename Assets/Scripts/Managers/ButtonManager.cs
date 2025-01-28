@@ -17,7 +17,7 @@ public class GameOverManager : MonoBehaviour
         GameManager.instance.time = 0;
         GameManager.instance.score = 0;
         GameManager.instance.Adn = 0;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("TitleScreen");
     }
     public void Rebirth()
     {
@@ -25,6 +25,6 @@ public class GameOverManager : MonoBehaviour
         GameManager.instance.time = 0;
         GameManager.instance.score = 0;
         GameManager.instance.Adn = 0;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("BornScreen");
     }
 }
