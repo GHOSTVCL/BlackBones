@@ -104,7 +104,7 @@ public class EnemyBehavior1 : MonoBehaviour
         }
         if (life <= 0)
         {
-            GameManager.instance.Adn += 1;
+            GameManager.instance.EnemyCount += 1;
             GameManager.instance.score += 500;
             
             Destroy(gameObject);

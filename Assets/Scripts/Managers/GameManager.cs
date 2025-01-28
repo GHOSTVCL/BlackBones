@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public float score = 0;
     public int Adn = 0;
+    public int EnemyCount = 0;
     public float lifes = 3;
     public float currentLevel;
     public float time = 0;
@@ -24,7 +25,15 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void Update()
+    {
+        if(EnemyCount == 3)
+        {
+            Adn++;
+            EnemyCount = 0;
+        }
+    }
 
 
-    
+
 }

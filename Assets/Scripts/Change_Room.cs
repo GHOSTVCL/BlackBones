@@ -53,6 +53,7 @@ public class Change_Room : MonoBehaviour
                 savedRooms.roomCount++;
                 playerController.EvolveResistance(playerController.LevelAmbient(savedRooms.levelCount), playerController.LevelIntensity());
                 simbol.asignIntensity(savedRooms.IntesityPerRoom(savedRooms.levelCount, savedRooms.roomCount));
+                simbol.overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
                 playerController.speed = playerController.baseSpeed;
                 playerController.slowed = false;
             }
