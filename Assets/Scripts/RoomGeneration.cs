@@ -40,6 +40,7 @@ public class RoomGeneration : MonoBehaviour
 
     [Header("AmbientCube")]
     [SerializeField] Light Light;
+    [SerializeField] Light Light2;
 
     [Header("AmbientCube")]
     [SerializeField] GameObject shader;
@@ -81,18 +82,21 @@ public class RoomGeneration : MonoBehaviour
         switch (ambient)
         {
             case 0:
+                Light.transform.localEulerAngles = new Vector3(50, -30, 0);
                 ambientColor = new Color(1f, 0f, 0f, 0.1f);
                 Light.color = new Color(0.7f, 0f, 0f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat1;
                 break;
 
             case 1:
+                Light.transform.localEulerAngles = new Vector3(50, -30, 0);
                 ambientColor = new Color(0f, 0f, 1f, 0.1f);
                 Light.color = new Color(0f, 0f, 0.7f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat2;
                 break;
 
             case 2:
+                Light.transform.localEulerAngles = new Vector3(50, -30, 0);
                 ambientColor = new Color(0f, 1f, 0f, 0.1f);
                 Light.color = new Color(0f, 0.7f, 0f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat3;
@@ -104,6 +108,7 @@ public class RoomGeneration : MonoBehaviour
                 break;
 
             case 4:
+                Light.transform.localEulerAngles = new Vector3(50, -30, 0);
                 ambientColor = new Color(0f, 1f, 1f, 0.1f);
                 Light.color = new Color(0f, 0.7f, 0.7f, 0.1f);
                 shader.GetComponent<Renderer>().material = mat5;
@@ -118,29 +123,34 @@ public class RoomGeneration : MonoBehaviour
         {
             //Light.color = ambient;
             Light.color = new Color(0.7f, 0f, 0f, 0.1f);
+            Light.transform.localEulerAngles = new Vector3(50, -30, 0);
             shader.GetComponent<Renderer>().material = mat1;
         }
         else if (ambient == new Color(0f,0f,1f, 0.1f))
         {
             //Light.color = ambient;
             Light.color = new Color(0f, 0f, 0.7f, 0.1f);
+            Light.transform.localEulerAngles = new Vector3(50, -30, 0);
             shader.GetComponent<Renderer>().material = mat2;
         }
         else if(ambient == new Color(0f,1f,0f, 0.1f))
         {
             //Light.color = ambient;
             Light.color = new Color(0f, 0.7f, 0f, 0.1f);
+            Light.transform.localEulerAngles = new Vector3(50, -30, 0);
             shader.GetComponent<Renderer>().material = mat3;
         }
         else if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
             Light.color = ambient;
+            
             shader.GetComponent<Renderer>().material = mat4;
         }
         else if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
             //Light.color = ambient;
             Light.color = new Color(0f, 0.7f, 0.7f, 0.1f);
+            Light.transform.localEulerAngles = new Vector3(50, -30, 0);
             shader.GetComponent<Renderer>().material = mat5;
         }
     }

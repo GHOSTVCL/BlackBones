@@ -21,6 +21,8 @@ public class player : MonoBehaviour
     [SerializeField] public Sprite NightPrefab;
     [SerializeField] public Sprite IdlePrefab;
 
+    [SerializeField] Light playerLight;
+
 
     [SerializeField] private Animator Animations;
     private Animation WalkAnim;
@@ -464,6 +466,7 @@ public class player : MonoBehaviour
         {
             resistedIntensity = 0;
         }
+        playerLight.range -= resistedIntensity;
     }
 
     public void AmbientEffect(Color ambient)
@@ -486,6 +489,7 @@ public class player : MonoBehaviour
         }
         if (ambient == new Color(0f, 0f, 0f, 0.1f))
         {
+            playerLight.gameObject.SetActive(true);
         }
         if (ambient == new Color(0f, 1f, 1f, 0.1f))
         {
