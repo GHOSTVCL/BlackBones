@@ -177,6 +177,8 @@ public class player : MonoBehaviour
             case 1:
                 playerSprites.sprite = FirePrefab;
                 Animations.SetBool("Fire", true);
+                Animations.SetBool("Ice", false);
+                Animations.SetBool("Night", false);
                 break;
             case 2:
                 playerSprites.sprite = WaterPrefab;
@@ -187,12 +189,20 @@ public class player : MonoBehaviour
             case 4:
                 playerSprites.sprite = IcePrefab;
                 Animations.SetBool("Ice", true);
+                Animations.SetBool("Fire", false);
+                Animations.SetBool("Night", false);
                 break;
             case 5:
                 playerSprites.sprite = NightPrefab;
+                Animations.SetBool("Night", true);
+                Animations.SetBool("Ice", false);
+                Animations.SetBool("Fire", false);
                 break;
             case 6:
                 playerSprites.sprite = IdlePrefab;
+                Animations.SetBool("Fire", false);
+                Animations.SetBool("Ice", false);
+                Animations.SetBool("Night", false);
                 break;
 
 
