@@ -14,14 +14,32 @@ public class AmbientSimbol : MonoBehaviour
     [SerializeField] private RawImage overlay;
     public RoomGeneration Rm;
 
+    private bool bbbb = false;
+
     void Start()
     {
-        AsignSimbol(SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
-        asignIntensity(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount));
-        overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+        if(SaveRooms.instance != null)
+        {
+            AsignSimbol(SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+            asignIntensity(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount));
+            overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+            bbbb = true;
+        }
+        
     }
 
-   public void AsignSimbol(Color Ambient)
+    private void Update()
+    {
+        if ((bbbb == false))
+        {
+            AsignSimbol(SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+            asignIntensity(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount));
+            overlayChange(SaveRooms.instance.IntesityPerRoom(SaveRooms.instance.levelCount, SaveRooms.instance.roomCount), SaveRooms.instance.AccesAmbient(SaveRooms.instance.levelCount));
+            bbbb = true;
+        }
+    }
+
+    public void AsignSimbol(Color Ambient)
     {
         Color actualcolor = Ambient;
        if(actualcolor == new Color(1f, 0f, 0f, 0.1f))
