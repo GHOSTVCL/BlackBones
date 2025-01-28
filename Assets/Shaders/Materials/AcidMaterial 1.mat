@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8332071002103629865
+--- !u!114 &-4241572530365927219
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Realistic Water
-  m_Shader: {fileID: -6465566751694194690, guid: a6e5a7f3ce95e2046ae4af0420041345, type: 3}
+  m_Name: AcidMaterial 1
+  m_Shader: {fileID: -6465566751694194690, guid: c03e00f033fbfc846986163672439fbc, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -35,14 +35,18 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _WaterTexture:
+        m_Texture: {fileID: 2800000, guid: 3a2eb63636135e946a2b8479f9aadf59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Absorcion_coeficient: 0.26
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Depht: 0.79
+    - _Float: 0
+    - _Float_1: 0
     m_Colors:
-    - _Absorcion_formua: {r: 0, g: 0.039226122, b: 0.3679245, a: 0}
-    - _WaterColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0.8406247, g: 1, b: 0, a: 0}
+    - _Movimiento_Textura: {r: -0.07, g: -0.06, b: 0, a: 0}
   m_BuildTextureStacks: []
