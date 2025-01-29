@@ -7,7 +7,6 @@ public class FadeInFadeOut : MonoBehaviour
 {
     [SerializeField]GameObject fadeOut;
     Animator animator;
-    Animation aaaaa;
     private int levelIndex;
 
     // Start is called before the first frame update

@@ -2806,6 +2806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeInFadeOut
       objectReference: {fileID: 0}
+    - target: {fileID: 8597722784936425489, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3374,6 +3378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7e3ad3fccd8bf4c9e75a167e4850c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 0}
   score: 0
   Adn: 0
   EnemyCount: 0
