@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6394ae49ad2424d94a7344d8e89815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirePrefab: {fileID: -1028772053, guid: 7938bb15486ba5341aa89b71d003c05e, type: 3}
+  FirePrefab: {fileID: 21300000, guid: 472bd71d71ff13e4a8689e887ea329d7, type: 3}
   WaterPrefab: {fileID: 21300000, guid: 172b0ca5a54f4734a8e3f2943f678f52, type: 3}
   ToxicPrefab: {fileID: 21300000, guid: ef2a75ff7c29b4143a066037988bdb79, type: 3}
   IcePrefab: {fileID: 21300000, guid: 751de32e36a417f43a49d6641949b8e3, type: 3}
