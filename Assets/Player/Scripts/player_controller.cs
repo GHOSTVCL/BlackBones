@@ -48,6 +48,8 @@ public class player : MonoBehaviour
     private GameObject roomManager;
     private SaveRooms roomSaved;
 
+    private string scene;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -148,17 +150,19 @@ public class player : MonoBehaviour
         if(GameManager.instance.lifes > 0)
         {
             gameObject.SetActive(false);
+            SaveRooms.instance.levelCount = -1;
             new WaitForSeconds(1f);
             transform.position = StartPosition;
             gameObject.SetActive(true);
             actuallife = maxlife;
             GameManager.instance.lifes -= 1;
-            SceneManager.LoadScene("BornScreen");
+            scene = "BornScreen";
+            SceneManager.LoadScene(scene);
         }
         else
         {
-            
-            SceneManager.LoadScene(4);
+            scene = "GameOverScene";
+            SceneManager.LoadScene(scene);
         }
         
     }
