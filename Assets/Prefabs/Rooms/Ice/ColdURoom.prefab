@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5000620892420116896}
   m_Layer: 0
   m_Name: Ice (3)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 6663263432865893009}
   m_Layer: 0
   m_Name: Ice (5)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 1388135636406130152}
   m_Layer: 0
   m_Name: Ice (6)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

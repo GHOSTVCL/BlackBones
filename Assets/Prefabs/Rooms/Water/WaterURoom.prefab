@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7058828984946142745}
   m_Layer: 0
   m_Name: Puddle (9)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8545971296122684828}
   m_Layer: 0
   m_Name: Puddle (8)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 96449632442265572}
   m_Layer: 0
   m_Name: Puddle (3)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 885184467337182924}
   m_Layer: 0
   m_Name: Puddle (7)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 4461251823708569466}
   m_Layer: 0
   m_Name: Puddle (10)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
