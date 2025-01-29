@@ -156,11 +156,15 @@ public class player : MonoBehaviour
             gameObject.SetActive(true);
             actuallife = maxlife;
             GameManager.instance.lifes -= 1;
+            GameManager.instance.EnemyCount = 0;
+            GameManager.instance.Adn = 3;
             scene = "BornScreen";
             SceneManager.LoadScene(scene);
         }
         else
         {
+            GameManager.instance.EnemyCount = 0;
+            GameManager.instance.Adn = 3;
             scene = "GameOverScene";
             SceneManager.LoadScene(scene);
         }
@@ -259,7 +263,7 @@ public class player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("enemy"))
         {
-            actuallife -= 1;
+            actuallife -= 5;
             EnemyBehaviorwander.Instance.GetKnockBack(EnemyBehaviorwander.Instance.transform, 2);
             
             if (actuallife <= 0)
@@ -498,7 +502,7 @@ public class player : MonoBehaviour
         {
             if(slowed == false && resistedIntensity != 0)
             {
-                speed = speed -(float)(2 * resistedIntensity) ;
+                speed = speed -(resistedIntensity-0.5f) ;
                 slowed = true;
             }
         }
@@ -514,14 +518,14 @@ public class player : MonoBehaviour
         {
             if (slowed == false && resistedIntensity != 0)
             {
-                speed = speed - (float)(2 * resistedIntensity);
+                speed = speed - (resistedIntensity-0.5f);
                 slowed = true;
             }
         }
     }
     private IEnumerator DrainLife()
     {
-        actuallife -= (1 * resistedIntensity) * Time.deltaTime;
+        actuallife -= (resistedIntensity) * Time.deltaTime;
         yield return new WaitForSeconds(1f);
     }
     public Color LevelAmbient(int level)

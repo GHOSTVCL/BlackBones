@@ -1039,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3553209030215097464, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4402281481310455788, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_Sprite
@@ -1735,7 +1735,7 @@ Transform:
   m_GameObject: {fileID: 1786014932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 61.83, z: 0}
+  m_LocalPosition: {x: 0, y: 80, z: 0}
   m_LocalScale: {x: 21.614815, y: 21.614815, z: 21.614815}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1999,9 +1999,17 @@ PrefabInstance:
       value: lightatack
       objectReference: {fileID: 0}
     - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
       propertyPath: XpText
       value: 
       objectReference: {fileID: 1012707517}
+    - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
+      propertyPath: maxlife
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
       propertyPath: lifeText
       value: 
@@ -2010,6 +2018,10 @@ PrefabInstance:
       propertyPath: IdlePrefab
       value: 
       objectReference: {fileID: 21300000, guid: 32bae606a8e00ba4a86efa04b050c667, type: 3}
+    - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
+      propertyPath: actuallife
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
       propertyPath: lightatack
       value: 
