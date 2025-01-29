@@ -44,7 +44,7 @@ public class SaveRooms : MonoBehaviour
     [HideInInspector]
     public int roomCount;
     [HideInInspector]
-    public int levelCount = 1;
+    public int levelCount = -1;
 
     public List<int> nRoomsPerLevel = new List<int>();
 
@@ -58,7 +58,7 @@ public class SaveRooms : MonoBehaviour
         {
             instance = this;
             roomCount = 1;
-            levelCount = 1;
+            levelCount = -1;
 
             DontDestroyOnLoad(gameObject);
         }

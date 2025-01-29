@@ -22,4 +22,9 @@ public class NextLevel : MonoBehaviour
         SceneManager.LoadScene("LevelScene");
         
     }
+
+    public void InvokeNext()
+    {
+        Invoke("NextLevelFunction", 1);
+    }
 }

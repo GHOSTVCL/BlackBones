@@ -13,6 +13,7 @@ public class StartRun : MonoBehaviour
     {
         roomManager = GameObject.Find("RoomManager");
         savedRooms = roomManager.GetComponent<SaveRooms>();
+        savedRooms.levelCount = -1;
     }
     private void OnTriggerEnter(Collider other)
     {
