@@ -2031,6 +2031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7e3ad3fccd8bf4c9e75a167e4850c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sound: {fileID: 0}
   score: 0
   Adn: 0
   EnemyCount: 0
@@ -2137,6 +2138,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: lightatack
       objectReference: {fileID: 0}
+    - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
+      propertyPath: slash
+      value: 
+      objectReference: {fileID: 8300000, guid: 10de6a5b94db5ef4ab14583831881f90, type: 3}
     - target: {fileID: 8426775933378206316, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
       propertyPath: speed
       value: 5
