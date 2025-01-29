@@ -7,21 +7,22 @@ public class FadeInFadeOut : MonoBehaviour
 {
     [SerializeField]GameObject fadeOut;
     Animator animator;
-    private int roomIndex;
+    private int levelIndex;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = fadeOut.GetComponent<Animator>();
         animator.Play("FadeIn");
-        roomIndex = SaveRooms.instance.roomCount;
+        levelIndex = SaveRooms.instance.levelCount;
         Invoke("Deactivate", 1);
     }
 
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name == "BornScreen")
+        if(levelIndex != SaveRooms.instance.levelCount)
         {
+            levelIndex = SaveRooms.instance.levelCount;
             FadeOut();
         }
     }
