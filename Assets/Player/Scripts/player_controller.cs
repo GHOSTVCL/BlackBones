@@ -39,6 +39,7 @@ public class player : MonoBehaviour
 
     [HideInInspector]
     public bool slowed;
+    public bool atacksound = false;
     [HideInInspector]
     public float baseSpeed;
 
@@ -138,12 +139,17 @@ public class player : MonoBehaviour
     }
     private IEnumerator Atack(Transform atack)
     {
-        audioSource.PlayOneShot(slash);
+        if(!atacksound)
+        {
+            audioSource.PlayOneShot(slash);
+            atacksound = true;
+        }
         Animations.SetBool("Atack", true);
         atack.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         atack.gameObject.SetActive(false);
         Animations.SetBool("Atack", false);
+        atacksound = false;
 
     }
     public void Die()
