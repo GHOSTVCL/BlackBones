@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class EvolutionManager : MonoBehaviour
@@ -36,6 +37,18 @@ public class EvolutionManager : MonoBehaviour
             instance = this;
 
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "TitleScreen" || SceneManager.GetActiveScene().name == "BornScreen")
+        {
+            FireEvolution = 0;
+            WaterEvolution = 0;
+            ToxicEvolution = 0;
+            nightEvolution = 0;
+            IceEvolution = 0;
         }
     }
 

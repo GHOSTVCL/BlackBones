@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
             Adn++;
             EnemyCount = 0;
         }
+        if(SceneManager.GetActiveScene().name == "TitleScreen" || SceneManager.GetActiveScene().name == "BornScreen")
+        {
+            Adn = 3;
+        }
     }
 
 

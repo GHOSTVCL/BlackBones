@@ -10,10 +10,6 @@ public class FinalManager : MonoBehaviour
     [SerializeField] GameObject ItsAMatch;
     [SerializeField] GameObject ViolentEnding;
 
-
-
-    private int NOnumber = 1;
-    private GameObject NO;
     // Start is called before the first frame update
     void Start()
     {
