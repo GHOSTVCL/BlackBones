@@ -1720,10 +1720,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 114202891}
+  - {fileID: 1879423112}
   - {fileID: 1853330801}
   - {fileID: 1078484465}
   - {fileID: 2093429761}
-  - {fileID: 1879423112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2960,7 +2960,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 692555000}
         m_TargetAssemblyTypeName: ShineSettings, Assembly-CSharp
         m_MethodName: ChangeShineSlider
         m_Mode: 0
@@ -5293,7 +5293,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 692554999}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: ChangeSlider
         m_Mode: 0
@@ -5833,7 +5833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1879423112
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5975,7 +5975,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 692555001}
         m_TargetAssemblyTypeName: FullScreenLogic, Assembly-CSharp
         m_MethodName: SetFullScreen
         m_Mode: 0
