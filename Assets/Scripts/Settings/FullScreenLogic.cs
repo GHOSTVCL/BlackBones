@@ -59,7 +59,7 @@ public class FullScreenLogic : MonoBehaviour
     public void CambiarResolucionMinima()
     {
         //Resolution resolucion = resoluciones[indiceResolucion];
-        Screen.SetResolution(800, 600, Screen.fullScreen);
+        Screen.SetResolution(980, 600, Screen.fullScreen);
     }
 
     public void SetFullScreen(bool isfullscreen)
