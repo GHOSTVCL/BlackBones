@@ -916,9 +916,9 @@ RectTransform:
   m_Children:
   - {fileID: 1337445947}
   - {fileID: 29470562}
-  - {fileID: 872268671}
-  - {fileID: 1725700952}
   - {fileID: 105223012}
+  - {fileID: 1725700952}
+  - {fileID: 872268671}
   - {fileID: 1169919598}
   - {fileID: 782772684}
   m_Father: {fileID: 0}
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rebirhth
+  m_text: Rebirth
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 172a76026c4daf34b8bf0cc93f8695a5, type: 2}
   m_sharedMaterial: {fileID: 8885567436026696219, guid: 172a76026c4daf34b8bf0cc93f8695a5, type: 2}
