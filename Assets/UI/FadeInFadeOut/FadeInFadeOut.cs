@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class FadeInFadeOut : MonoBehaviour
@@ -14,24 +15,29 @@ public class FadeInFadeOut : MonoBehaviour
         animator = fadeOut.GetComponent<Animator>();
         animator.Play("FadeIn");
         roomIndex = SaveRooms.instance.roomCount;
+        Invoke("Deactivate", 1);
     }
 
     private void Update()
     {
-        if(roomIndex != SaveRooms.instance.roomCount)
+        if(SceneManager.GetActiveScene().name == "BornScreen")
         {
-            animator.Play("FadeOut");
-            Invoke("FadeIn", 1);
-            roomIndex = SaveRooms.instance.roomCount;
+            FadeOut();
         }
     }
 
     public void FadeIn()
     {
+        fadeOut.SetActive(true);
         animator.Play("FadeIn");
     }
     public void FadeOut()
     {
+        fadeOut.SetActive(true);
         animator.Play("FadeOut");
+    }
+    public void Deactivate()
+    {
+        fadeOut.SetActive(false);
     }
 }

@@ -19,7 +19,11 @@ public class StartRun : MonoBehaviour
         {
             savedRooms.levelCount = 0;
             savedRooms.roomCount = 1;
-            SceneManager.LoadScene("EvolveScene");
+            Invoke("ToEvolveScreen",1);
         }
+    }
+    private void ToEvolveScreen()
+    {
+        SceneManager.LoadScene("EvolveScene");
     }
 }

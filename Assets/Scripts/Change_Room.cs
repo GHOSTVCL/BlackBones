@@ -51,7 +51,7 @@ public class Change_Room : MonoBehaviour
             if (savedRooms.nRoomsPerLevel[savedRooms.levelCount - 1] != savedRooms.roomCount)
             {
                 savedRooms.roomCount++;
-                Invoke("ChangeRoom",1);
+                ChangeRoom();
             }
             else
             {

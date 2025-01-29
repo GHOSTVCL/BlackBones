@@ -525,6 +525,7 @@ RectTransform:
   - {fileID: 1359359812}
   - {fileID: 1064655444}
   - {fileID: 596098820}
+  - {fileID: 1078484465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -802,6 +803,7 @@ GameObject:
   - component: {fileID: 599760173}
   - component: {fileID: 599760172}
   - component: {fileID: 599760175}
+  - component: {fileID: 599760176}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -873,9 +875,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 599760176}
+        m_TargetAssemblyTypeName: FadeInFadeOut, Assembly-CSharp
+        m_MethodName: FadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 599760175}
         m_TargetAssemblyTypeName: ChangeScreen, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: InvokeChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -936,6 +950,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: BornScreen
+--- !u!114 &599760176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599760170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7932fb48841eef428b00c30c74b6b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOut: {fileID: 1078484464}
 --- !u!1 &696590860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1388,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064655443}
   m_CullTransparentMesh: 1
+--- !u!1 &1078484464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8597722784936425489, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+  m_PrefabInstance: {fileID: 42632327405506863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1078484465 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+  m_PrefabInstance: {fileID: 42632327405506863}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1148635214
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1462,7 @@ GameObject:
   - component: {fileID: 1359359814}
   - component: {fileID: 1359359813}
   - component: {fileID: 1359359817}
+  - component: {fileID: 1359359818}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -1509,9 +1547,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1359359818}
+        m_TargetAssemblyTypeName: FadeInFadeOut, Assembly-CSharp
+        m_MethodName: FadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1359359813}
         m_TargetAssemblyTypeName: ChangeScreen, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: InvokeChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1571,6 +1621,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae42a027e508ba74c92a03752838a22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1359359818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359359811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7932fb48841eef428b00c30c74b6b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOut: {fileID: 1078484464}
 --- !u!1 &1612465838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +1981,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127265709}
   m_CullTransparentMesh: 1
+--- !u!1001 &42632327405506863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 393306441}
+    m_Modifications:
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821572522527864498, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597722784936425489, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
+      propertyPath: m_Name
+      value: FadeInFadeOut
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff63b7d59204cff45a064176b55d1308, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
