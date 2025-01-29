@@ -18,7 +18,7 @@ public class ChangeScreen : MonoBehaviour
         {
             SaveRooms.instance.ResetRooms();
         }
-        if(SceneManager.GetActiveScene().name == "EvolveScene" && scene == "TitleScreen")
+        if(scene == "TitleScreen")
         {
             SaveRooms.instance.levelCount = -1;
         }
