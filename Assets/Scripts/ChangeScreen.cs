@@ -7,7 +7,10 @@ public class ChangeScreen : MonoBehaviour
 {
     // Start is called before the first frame update
     public string scene;
-
+    private void Start()
+    {
+       
+    }
     public void InvokeChange()
     {
         Invoke("ChangeScene", 1);
@@ -16,11 +19,13 @@ public class ChangeScreen : MonoBehaviour
     {
         if ((SceneManager.GetActiveScene().name == "TitleScreen") && gameObject.name == "Start")
         {
-            SaveRooms.instance.ResetRooms();
+            
+            SaveRooms.instance.ResetRooms();     
         }
         if(scene == "TitleScreen")
         {
-            SaveRooms.instance.levelCount = 0;
+           
+            SaveRooms.instance.levelCount = 0;  
         }
         SceneManager.LoadScene(scene);
     }

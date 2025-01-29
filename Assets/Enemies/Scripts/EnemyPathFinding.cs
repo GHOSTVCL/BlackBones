@@ -7,6 +7,13 @@ public class EnemyPathFinding : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float DetectionRadius = 4f;
     [SerializeField] public Transform atack;
+
+    [SerializeField] private AudioClip Sound1;
+    [SerializeField] private AudioClip Sound2;
+    [SerializeField] private AudioClip Sound3;
+    private int randomsound;
+    private AudioSource audiosource;
+    private bool playedsound = false;
     private Transform player;
     private Rigidbody rb;
     private Vector3 movement;
@@ -18,6 +25,7 @@ public class EnemyPathFinding : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         behavior = GetComponent<EnemyBehaviorwander>();
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,11 +34,29 @@ public class EnemyPathFinding : MonoBehaviour
         float DistanceToPlayer = Vector3.Distance(transform.position, player.position);
         if(DistanceToPlayer <= DetectionRadius)
         {
+            if (!playedsound)
+            {
+                randomsound = Random.Range(1, 3);
+                switch (randomsound)
+                {
+                    case 1:
+                        audiosource.PlayOneShot(Sound1);
+                        break;
+                    case 2:
+                        audiosource.PlayOneShot(Sound2);
+                        break;
+                    case 3:
+                        audiosource.PlayOneShot(Sound3);
+                        break;
+                }
+                playedsound = true;
+            }
             behavior.state = EnemyBehaviorwander.State.Chase;
             StartCoroutine(behavior.ChaseBehavior());
         }
         else 
         {
+            playedsound = false;
             behavior.state = EnemyBehaviorwander.State.Patrolling;
             if (!ispatrolling)
             {

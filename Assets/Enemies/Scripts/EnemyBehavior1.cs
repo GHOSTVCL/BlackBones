@@ -9,16 +9,24 @@ public class EnemyBehavior1 : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float DetectionRadius = 4f;
     [SerializeField] private Transform atack;
+
+    [SerializeField] private AudioClip Sound1;
+    [SerializeField] private AudioClip Sound2;
+    [SerializeField] private AudioClip Sound3;
+    private int randomsound;
+    private AudioSource audiosource;
     public float life = 3f;
     private Transform player;
     private Rigidbody rb;
     private bool right = true;
+    private bool playedsound = false;
     private Animator animations;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animations = GetComponent<Animator>();
+        audiosource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -32,6 +40,24 @@ public class EnemyBehavior1 : MonoBehaviour
 
         if(distanceToPlayer <= DetectionRadius)
         {
+            if(!playedsound)
+            {
+                randomsound = Random.Range(1, 3);
+                switch (randomsound)
+                {
+                    case 1:
+                        audiosource.PlayOneShot(Sound1);
+                        break;
+                    case 2:
+                        audiosource.PlayOneShot(Sound2);
+                        break;
+                    case 3:
+                        audiosource.PlayOneShot(Sound3);
+                        break;
+                }
+                playedsound = true;
+            }
+        
             Vector3 moveEnemy = (player.position - transform.position).normalized;
             moveEnemy.y = 0;
             DoAnimations(moveEnemy);
@@ -48,6 +74,7 @@ public class EnemyBehavior1 : MonoBehaviour
         }
         else
         {
+            playedsound = false;
             animations.SetBool("walk", false);
         }
         if(distanceToPlayer <= 1)

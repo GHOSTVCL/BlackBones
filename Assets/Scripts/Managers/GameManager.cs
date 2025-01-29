@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
-
+    [SerializeField] private AudioClip Sound;
+    private AudioSource audioSource;
     public float score = 0;
     public int Adn = 0;
     public int EnemyCount = 0;
@@ -24,11 +25,15 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        audioSource = GetComponent<AudioSource>();
+        
     }
     private void Update()
     {
         if(EnemyCount == 3)
         {
+            audioSource.PlayOneShot(Sound);
             Adn++;
             EnemyCount = 0;
         }

@@ -17,11 +17,10 @@ public class player : MonoBehaviour
     [SerializeField] public Sprite IcePrefab;
     [SerializeField] public Sprite NightPrefab;
     [SerializeField] public Sprite IdlePrefab;
-
     [SerializeField] public Light playerLight;
-
-
     [SerializeField] private Animator Animations;
+    [SerializeField] private AudioClip slash;
+    private AudioSource audioSource;
     private Animation WalkAnim;
     private SpriteRenderer playerSprites;
     private Rigidbody rb;
@@ -58,6 +57,7 @@ public class player : MonoBehaviour
         playerSprites = gameObject.GetComponent<SpriteRenderer>();
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
+        audioSource = GetComponent<AudioSource>();
         //EvolveResistance(LevelAmbient(roomSaved.levelCount), LevelIntensity());
         gameObject.transform.position = new Vector3(0, 1, 0);
         AsignSprite(Evolution());
@@ -138,6 +138,7 @@ public class player : MonoBehaviour
     }
     private IEnumerator Atack(Transform atack)
     {
+        audioSource.PlayOneShot(slash);
         Animations.SetBool("Atack", true);
         atack.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
