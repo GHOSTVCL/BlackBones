@@ -923,6 +923,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 265780375}
+    - target: {fileID: 3521440952315991966, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521440952315991966, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a888ba6c34fe0ed4ca78abbefe6d3878, type: 3}
     - target: {fileID: 3547710648619605778, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.5
@@ -1165,6 +1173,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362110812098426174, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561608947274978796, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 172a76026c4daf34b8bf0cc93f8695a5, type: 2}
+    - target: {fileID: 6561608947274978796, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561608947274978796, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.7529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561608947274978796, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6561608947274978796, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7287963280321439829, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
@@ -1737,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 1350417725}
     - target: {fileID: 1564773634908244083, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2213104044655580218, guid: 1b6707fccf3cc2e4787939fc669f92df, type: 3}
       propertyPath: m_Pivot.x
