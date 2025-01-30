@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _WaterTexture:
-        m_Texture: {fileID: 2800000, guid: fa9c4f85fcb195c47aaf055bc7ad83ff, type: 3}
+        m_Texture: {fileID: 2800000, guid: 25e75bc7bee52fd46b5064cd971bd9a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []

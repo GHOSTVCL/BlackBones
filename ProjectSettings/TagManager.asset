@@ -9,6 +9,8 @@ TagManager:
   - lightatack
   - heavyatack
   - FirstDoor
+  - damage
+  - slow
   layers:
   - Default
   - TransparentFX
