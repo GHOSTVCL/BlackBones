@@ -26,6 +26,11 @@ public class ChangeScreen : MonoBehaviour
         {
             SaveRooms.instance.levelCount = 0;  
         }
+        if((SceneManager.GetActiveScene().name == "GameOverScene") && gameObject.name == "Rebirth")
+        {
+            GameManager.instance.lifes = 3;
+            SaveRooms.instance.ResetRooms();
+        }
         SceneManager.LoadScene(scene);
     }
 }
