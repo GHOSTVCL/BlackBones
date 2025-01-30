@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI timeText;
     [SerializeField] private TextMeshProUGUI livesText;
-    [SerializeField] private TextMeshProUGUI adnText;
+    [SerializeField] public TextMeshProUGUI adnText;
     void Update()
     {
         scoreText.text = GameManager.instance.score.ToString() + " pts";
