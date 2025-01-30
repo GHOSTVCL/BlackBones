@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
     [SerializeField] public float speed = 3f;
-    [SerializeField] private Transform lightatack;
-    [SerializeField] private Transform heavyatack;
+    [SerializeField] private GameObject atackObject;
+    [SerializeField] public Transform lightatack;
     [SerializeField] private TextMeshProUGUI lifeText;
-    [SerializeField] private TextMeshProUGUI XpText;
 
     [SerializeField] public Sprite FirePrefab;
     [SerializeField] public Sprite WaterPrefab;
@@ -33,7 +32,7 @@ public class player : MonoBehaviour
     public bool isdeath = false;
     public bool resetlife = false;
     private Vector3 StartPosition;
-    public float Xp;
+
     private float damageInterval = 1f;
     private float damageTimer = 0f;
 
@@ -59,7 +58,7 @@ public class player : MonoBehaviour
         roomManager = GameObject.Find("RoomManager");
         roomSaved = roomManager.GetComponent<SaveRooms>();
         audioSource = GetComponent<AudioSource>();
-        //EvolveResistance(LevelAmbient(roomSaved.levelCount), LevelIntensity());
+
         gameObject.transform.position = new Vector3(0, 1, 0);
         AsignSprite(Evolution());
         baseSpeed = speed;
@@ -72,7 +71,6 @@ public class player : MonoBehaviour
         moveX = Input.GetAxis("Horizontal");
         moveInput = new Vector3(moveX, 0f, moveZ);
         lifeText.text = "X" + GameManager.instance.lifes.ToString();
-        XpText.text = "X" + Xp.ToString();
         if(actuallife < 0)
         {
             Die();
@@ -123,19 +121,17 @@ public class player : MonoBehaviour
 
         if(Input.GetKey(KeyCode.A)&& mirandoDerecha)
         {
-            Flip();            //Flip();
+            Flip();
+            lightatack.localScale = new Vector3(-lightatack.localScale.x, lightatack.localScale.y, lightatack.localScale.z);
         }
         if (Input.GetKey(KeyCode.D) &&!mirandoDerecha)
         {
             Flip();
+            lightatack.localScale = new Vector3(lightatack.localScale.x, lightatack.localScale.y, lightatack.localScale.z);
         }   
         if (Input.GetKey(KeyCode.Space))
         {
             StartCoroutine(Atack(lightatack));
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            StartCoroutine(Atack(heavyatack));
         }
     }
     private IEnumerator Atack(Transform atack)
