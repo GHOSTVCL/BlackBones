@@ -19,7 +19,7 @@ public class ChangeScreen : MonoBehaviour
     {
         if ((SceneManager.GetActiveScene().name == "TitleScreen") && gameObject.name == "Start")
         {
-            
+            GameManager.instance.lifes = 3;
             SaveRooms.instance.ResetRooms();     
         }
         if(scene == "TitleScreen")
