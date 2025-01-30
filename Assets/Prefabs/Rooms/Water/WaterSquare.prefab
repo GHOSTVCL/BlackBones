@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7727114457395586471}
   m_Layer: 0
   m_Name: Puddle (10)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 2571401581188771692}
   m_Layer: 0
   m_Name: Puddle (15)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 7959198955056564856}
   m_Layer: 0
   m_Name: Puddle (12)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 2978068042174433393}
   m_Layer: 0
   m_Name: Puddle (18)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 4378309165501447783}
   m_Layer: 0
   m_Name: Puddle (14)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -977,7 +977,7 @@ GameObject:
   - component: {fileID: 2504781625318854364}
   m_Layer: 0
   m_Name: Puddle (17)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 4169814776936815815}
   m_Layer: 0
   m_Name: Puddle (16)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 2682723422469179158}
   m_Layer: 0
   m_Name: Puddle (13)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 2365465655303568409}
   m_Layer: 0
   m_Name: Puddle (11)
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 4603250185904289570}
   m_Layer: 0
   m_Name: Puddle
-  m_TagString: Untagged
+  m_TagString: slow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
