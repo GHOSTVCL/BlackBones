@@ -31,13 +31,13 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if(EnemyCount == 3)
+        if(EnemyCount >= 3)
         {
             audioSource.PlayOneShot(Sound);
             Adn++;
             EnemyCount = 0;
         }
-        if(SceneManager.GetActiveScene().name == "TitleScreen" || SceneManager.GetActiveScene().name == "BornScreen")
+        if(SceneManager.GetActiveScene().name == "BornScreen")
         {
             Adn = 3;
         }

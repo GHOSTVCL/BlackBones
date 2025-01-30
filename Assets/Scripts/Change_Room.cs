@@ -67,7 +67,7 @@ public class Change_Room : MonoBehaviour
                 EvolutionManager.instance.savedIce = EvolutionManager.instance.IceEvolution;
                 GameManager.instance.Adn += 1;
                 savedRooms.roomCount = 1;
-                Invoke("ToEvolveScreen",1);
+                ToEvolveScreen();
             }
         }
     }
