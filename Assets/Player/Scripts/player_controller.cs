@@ -67,6 +67,7 @@ public class player : MonoBehaviour
     }
     private void Update()
     {
+        AsignSprite(Evolution());
         moveZ = Input.GetAxis("Vertical");
         moveX = Input.GetAxis("Horizontal");
         moveInput = new Vector3(moveX, 0f, moveZ);

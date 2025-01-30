@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EvolutionManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8045619127178370383, guid: ccc7c200e43999d4fa08be57e6ebec71, type: 3}
+      propertyPath: IceEvolution
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1766,7 +1770,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
