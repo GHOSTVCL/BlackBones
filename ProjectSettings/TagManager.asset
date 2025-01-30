@@ -11,6 +11,7 @@ TagManager:
   - FirstDoor
   - damage
   - slow
+  - IntantKill
   layers:
   - Default
   - TransparentFX
