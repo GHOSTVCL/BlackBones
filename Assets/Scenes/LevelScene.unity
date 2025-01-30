@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1891473838}
-  sliderValue: 0.5
+  sliderValue: 1
 --- !u!114 &42522356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1325303768}
-  sliderValue: 0.5
+  sliderValue: 1
   panelBrillo: {fileID: 1746934162}
 --- !u!114 &148911296 stripped
 MonoBehaviour:
@@ -1609,7 +1609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3432548735010567933, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3432548735010567933, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1809,7 +1809,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a01edd32951ab4943932d154967cc65a, type: 3}
     - target: {fileID: 5149355608528814592, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5149355608528814592, guid: 654f77d2ccdf29f488cf764bc0f39526, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
