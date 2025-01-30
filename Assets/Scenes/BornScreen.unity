@@ -1691,7 +1691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 59704649}
-  sliderValue: 0.5
+  sliderValue: 1
 --- !u!114 &265780376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2112633804}
-  sliderValue: 0.5
+  sliderValue: 1
   panelBrillo: {fileID: 184107991}
 --- !u!1 &351891673
 GameObject:
@@ -3585,7 +3585,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   atackObject: {fileID: 1064978554692497495}
-  followScript: {fileID: 4294137387538365210}
   lightatack: {fileID: 3499124534244416509}
   lifeText: {fileID: 246358168}
   FirePrefab: {fileID: 21300000, guid: 5750761ddaa99044292829fbf45ed2e9, type: 3}
