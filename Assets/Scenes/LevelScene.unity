@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1891473838}
-  sliderValue: 100
+  sliderValue: 0.5
 --- !u!114 &42522356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1325303768}
-  sliderValue: 50
+  sliderValue: 0.5
   panelBrillo: {fileID: 1746934162}
 --- !u!114 &148911296 stripped
 MonoBehaviour:

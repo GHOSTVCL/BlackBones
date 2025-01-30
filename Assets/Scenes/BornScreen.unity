@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 59704649}
-  sliderValue: 0
+  sliderValue: 0.5
 --- !u!114 &265780376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,7 +1507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2112633804}
-  sliderValue: 0
+  sliderValue: 0.5
   panelBrillo: {fileID: 184107991}
 --- !u!1 &351891673
 GameObject:
